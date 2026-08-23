@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Users, Palette, Trophy, Play, Sparkles, Smile, Flame } from 'lucide-react';
+import { Users, Palette, Play, Sparkles } from 'lucide-react';
 import { sounds } from '../utils/soundEffects';
 
 interface HomeScreenProps {
@@ -9,7 +9,7 @@ interface HomeScreenProps {
   initialCode?: string;
 }
 
-const AVATARS = ['👸', '🤴', '👩‍❤️‍👨', '🐱', '🦊', '🥑', '🍕', '☕', '💖', '😜', '🦄', '🎮'];
+const AVATARS = ['🎨', '🦊', '🐱', '🦉', '🦜', '🌸', '👶', '🍕', '⭐', '😜', '🚀', '🎮'];
 
 export const HomeScreen: React.FC<HomeScreenProps> = ({
   onCreateRoom,
@@ -22,7 +22,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
     return localStorage.getItem('drawing_duel_player_name') || '';
   });
   const [selectedAvatar, setSelectedAvatar] = useState(() => {
-    return localStorage.getItem('drawing_duel_player_avatar') || '👸';
+    return localStorage.getItem('drawing_duel_player_avatar') || '🎨';
   });
   const [roomCodeInput, setRoomCodeInput] = useState(initialCode);
   const [error, setError] = useState('');
@@ -87,17 +87,17 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
       {/* Hero Header */}
       <div className="text-center max-w-2xl mb-8 md:mb-10">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-rose-500/20 border border-pink-500/30 text-pink-300 text-xs sm:text-sm font-bold mb-4 shadow-lg shadow-pink-500/10">
-          <Heart size={15} className="text-pink-400 fill-pink-400 animate-pulse" />
-          <span>Couples & GF Only • Funny Real-Time Battle 💕</span>
+          <Sparkles size={15} className="text-pink-400 animate-pulse" />
+          <span>Real-Time 2-Player Cartoon Drawing Showdown ⚡</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
           Draw Together. <br className="hidden sm:inline" />
-          <span className="gradient-text-pink">Roast Each Other. 💕</span>
+          <span className="gradient-text-pink">Compete for Glory! 🎨</span>
         </h1>
 
         <p className="mt-4 text-base sm:text-lg text-slate-300">
-          Pick a cartoon prompt, race the clock, and let our savage AI judge whose drawing is pure art and whose belongs on the fridge!
+          Pick a cartoon prompt (Oggy, Bheem, Owl, Parrot, Baby, Flower & more), race the clock, and let AI score who drew it best!
         </p>
       </div>
 
@@ -110,7 +110,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           {/* Profile Setup */}
           <div className="mb-6">
             <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
-              Your Name (GF / BF)
+              Your Display Name
             </label>
             <div className="relative">
               <input
@@ -129,7 +129,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
             {/* Avatar Selector */}
             <div className="mt-3">
               <label className="block text-[11px] font-medium text-slate-400 mb-1.5">
-                Pick Your Vibe
+                Choose Avatar
               </label>
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1.5 pt-0.5 no-scrollbar">
                 {AVATARS.map((av) => (
@@ -169,7 +169,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               }`}
             >
               <Users size={16} />
-              Host Couple Room
+              Create Room
             </button>
             <button
               type="button"
@@ -185,7 +185,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               }`}
             >
               <Play size={16} />
-              Join Partner
+              Join Room
             </button>
           </div>
 
@@ -200,21 +200,21 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           {tab === 'create' ? (
             <form onSubmit={handleCreate} className="space-y-4">
               <p className="text-xs text-slate-300">
-                You'll get an invite code & QR to send to your partner. No app install needed!
+                You'll get an invite code & QR to share with Player 2. No app install needed!
               </p>
               <button
                 type="submit"
                 disabled={loading}
                 className="btn-primary w-full py-3.5 text-base shadow-xl shadow-pink-500/30"
               >
-                {loading ? 'Starting Duo Room...' : 'Start Couple Battle 💕'}
+                {loading ? 'Creating Room...' : 'Start Duo Room 🚀'}
               </button>
             </form>
           ) : (
             <form onSubmit={handleJoin} className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
-                  Partner's Room Code
+                  6-Character Room Code
                 </label>
                 <input
                   type="text"
@@ -233,7 +233,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 disabled={loading}
                 className="w-full py-3.5 rounded-14 font-display font-bold text-base bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white rounded-xl shadow-lg shadow-purple-500/30 flex items-center justify-center gap-2 transition-all"
               >
-                {loading ? 'Joining Partner...' : 'Join Partner Room 💖'}
+                {loading ? 'Joining Room...' : 'Join Room 🎮'}
               </button>
             </form>
           )}
@@ -250,7 +250,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
               className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5 transition-colors"
             >
               <Palette size={14} />
-              Warmup
+              Solo Mode
             </button>
           </div>
         </div>
@@ -260,19 +260,19 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           <div className="p-3.5 rounded-2xl bg-slate-900/60 border border-pink-500/20 backdrop-blur-sm">
             <span className="text-2xl mb-1 block">🐱</span>
             <h4 className="text-xs font-bold text-white">30 Cartoons</h4>
-            <p className="text-[10px] text-pink-300 mt-0.5">Cute & Hilarious</p>
+            <p className="text-[10px] text-pink-300 mt-0.5">Oggy, Bheem & More</p>
           </div>
 
           <div className="p-3.5 rounded-2xl bg-slate-900/60 border border-purple-500/20 backdrop-blur-sm">
             <span className="text-2xl mb-1 block">🤖</span>
-            <h4 className="text-xs font-bold text-white">AI Verdict</h4>
+            <h4 className="text-xs font-bold text-white">AI Scoring</h4>
             <p className="text-[10px] text-purple-300 mt-0.5">SSIM & Shape Match</p>
           </div>
 
           <div className="p-3.5 rounded-2xl bg-slate-900/60 border border-cyan-500/20 backdrop-blur-sm">
             <span className="text-2xl mb-1 block">⏱️</span>
             <h4 className="text-xs font-bold text-white">Time-Lapse</h4>
-            <p className="text-[10px] text-cyan-300 mt-0.5">Watch Them Draw</p>
+            <p className="text-[10px] text-cyan-300 mt-0.5">Stroke Replay</p>
           </div>
         </div>
       </div>

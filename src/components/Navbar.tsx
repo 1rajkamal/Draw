@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Volume2, VolumeX, Copy, Check, HelpCircle, Heart, Sparkles } from 'lucide-react';
+import { Volume2, VolumeX, Copy, Check, HelpCircle, Sparkles } from 'lucide-react';
 import { sounds } from '../utils/soundEffects';
 
 interface NavbarProps {
@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-2.5 cursor-pointer group select-none"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 via-rose-500 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/25 group-hover:scale-105 transition-transform">
-              <span className="text-xl">👩‍❤️‍👨</span>
+              <span className="text-xl">🎨</span>
             </div>
             <div>
               <div className="flex items-center gap-1.5">
@@ -49,12 +49,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                   Drawing Duel
                 </span>
                 <span className="text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r from-pink-500/30 to-purple-500/30 text-pink-300 border border-pink-500/40 flex items-center gap-1">
-                  <Heart size={10} className="fill-pink-400 text-pink-400" />
-                  COUPLES & GF ONLY
+                  <Sparkles size={10} className="text-pink-400" />
+                  2-PLAYER LIVE
                 </span>
               </div>
-              <p className="text-[11px] text-pink-300/80 font-medium hidden sm:block">
-                Funny Real-Time Partner Battle 💖
+              <p className="text-[11px] text-slate-400 font-medium hidden sm:block">
+                Real-Time Cartoon Drawing Battle ⚡
               </p>
             </div>
           </div>
@@ -66,9 +66,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 onClick={handleCopyCode}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-pink-500/30 text-xs font-mono text-pink-300 transition-colors"
-                title="Click to copy room code for your partner"
+                title="Click to copy room code"
               >
-                <span className="text-slate-400 font-sans hidden xs:inline">Duo Code:</span>
+                <span className="text-slate-400 font-sans hidden xs:inline">Room Code:</span>
                 <span className="font-bold tracking-widest">{roomCode}</span>
                 {copied ? <Check size={14} className="text-emerald-400" /> : <Copy size={14} className="text-slate-400" />}
               </button>
@@ -100,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 sounds.playClick();
               }}
               className="p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-white/10 text-slate-300 hover:text-white transition-colors"
-              title="Couple Game Rules"
+              title="How to play"
               aria-label="Game Rules"
             >
               <HelpCircle size={18} />
@@ -115,8 +115,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="glass-panel w-full max-w-lg p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto border border-pink-500/30">
             <div className="flex items-center justify-between pb-4 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Heart className="text-pink-400 fill-pink-400" size={22} />
-                <h3 className="text-xl font-display text-white">Couple Game Rules 💖</h3>
+                <Sparkles className="text-pink-400" size={22} />
+                <h3 className="text-xl font-display text-white">How Drawing Duel Works 🎨</h3>
               </div>
               <button
                 onClick={() => setShowRules(false)}
@@ -129,12 +129,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="mt-5 space-y-4 text-sm text-slate-300 leading-relaxed">
               <div className="flex gap-3 items-start p-3 rounded-xl bg-slate-800/50 border border-pink-500/20">
                 <span className="w-6 h-6 rounded-full bg-pink-500/20 text-pink-400 font-bold flex items-center justify-center shrink-0">1</span>
-                <p><strong className="text-white">Create Room & Invite Partner:</strong> One partner creates a 6-character room code and sends the link or shows the QR code.</p>
+                <p><strong className="text-white">Create Room & Invite Partner:</strong> One player creates a 6-character room code and sends the link or shows the QR code.</p>
               </div>
 
               <div className="flex gap-3 items-start p-3 rounded-xl bg-slate-800/50 border border-purple-500/20">
                 <span className="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center shrink-0">2</span>
-                <p><strong className="text-white">Pick a Cartoon Prompt:</strong> Choose difficulty (Easy / Medium / Hard) and select a cartoon to draw.</p>
+                <p><strong className="text-white">Pick a Cartoon Prompt:</strong> Choose difficulty (Easy / Medium / Hard) and select a cartoon to draw (Oggy, Bheem, Owl, Parrot, Baby, Flower, etc.).</p>
               </div>
 
               <div className="flex gap-3 items-start p-3 rounded-xl bg-slate-800/50 border border-cyan-500/20">
@@ -144,12 +144,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <div className="flex gap-3 items-start p-3 rounded-xl bg-slate-800/50 border border-amber-500/20">
                 <span className="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center shrink-0">4</span>
-                <p><strong className="text-white">AI Verdict & Roasting:</strong> The AI scores both drawings side-by-side on edge contours, color matching, and accuracy to crown the winner!</p>
+                <p><strong className="text-white">AI Accuracy Scoring:</strong> The AI scores both drawings side-by-side on edge contours, color matching, and accuracy to crown the winner!</p>
               </div>
 
               <div className="flex gap-3 items-start p-3 rounded-xl bg-slate-800/50 border border-emerald-500/20">
                 <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center shrink-0">5</span>
-                <p><strong className="text-white">Watch Replay & Save Postcard:</strong> Watch your partner struggle stroke-by-stroke in the time-lapse player and download your match postcard!</p>
+                <p><strong className="text-white">Watch Replay & Save Postcard:</strong> Watch the stroke-by-stroke time-lapse replay and download your match postcard!</p>
               </div>
             </div>
 
@@ -157,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => setShowRules(false)}
               className="btn-primary w-full mt-6 py-3"
             >
-              Let's Duel! 💕
+              Let's Play! 🎨
             </button>
           </div>
         </div>

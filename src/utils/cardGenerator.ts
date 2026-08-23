@@ -44,7 +44,7 @@ export async function generateMatchCard(
   ctx.fillStyle = '#ffffff';
   ctx.font = 'bold 36px Outfit, sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillText('🎨 DRAWING DUEL — COUPLES EDITION 💕', width / 2, 60);
+  ctx.fillText('🎨 DRAWING DUEL MATCH CARD', width / 2, 60);
 
   ctx.fillStyle = '#94a3b8';
   ctx.font = '18px Inter, sans-serif';
@@ -126,11 +126,11 @@ export async function generateMatchCard(
   }
 
   // Footer Banner
-  ctx.fillStyle = '#f472b6';
+  ctx.fillStyle = '#38bdf8';
   ctx.font = '14px Inter, sans-serif';
   ctx.textAlign = 'center';
   ctx.fillText(
-    isTie ? "🤝 Tied Match! Perfect Couple Energy! 💕" : '✨ Created with Drawing Duel — Couples & GF Only 💕',
+    isTie ? "🤝 Tied Match! Great Minds Draw Alike!" : '✨ Created with Drawing Duel — Real-Time 2-Player Game',
     width / 2,
     height - 40
   );

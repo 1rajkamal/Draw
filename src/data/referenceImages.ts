@@ -9,918 +9,998 @@ export interface ReferenceDrawing {
 }
 
 export const REFERENCE_IMAGES: ReferenceDrawing[] = [
-  // ================= EASY (10 DRAWINGS) =================
+  // ================= EASY (10 CUTE CARTOON CHARACTERS) =================
   {
     id: 'easy-1',
-    title: 'Cute Kitten',
+    title: 'Smiling Flower',
     difficulty: 'easy',
-    category: 'Animals',
-    hint: 'Draw the round head, triangle ears, whiskers, and cute pink cheeks!',
-    palette: ['#1e293b', '#f43f5e', '#fbbf24', '#f8fafc', '#ec4899'],
+    category: 'Nature',
+    hint: 'Draw the round smiling center, 6 pink petals around it, green stem, and cute leaves!',
+    palette: ['#facc15', '#ec4899', '#22c55e', '#f43f5e', '#1e293b'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#fef2f2"/>
-      <!-- Body & Ears -->
-      <path d="M120 180 L140 100 L190 150 Z" fill="#fbcfe8" stroke="#1e293b" stroke-width="8" stroke-linejoin="round"/>
-      <path d="M280 180 L260 100 L210 150 Z" fill="#fbcfe8" stroke="#1e293b" stroke-width="8" stroke-linejoin="round"/>
-      <path d="M140 160 L150 115 L180 145 Z" fill="#f43f5e"/>
-      <path d="M260 160 L250 115 L220 145 Z" fill="#f43f5e"/>
-      <!-- Head -->
-      <circle cx="200" cy="210" r="110" fill="#ffffff" stroke="#1e293b" stroke-width="8"/>
-      <!-- Eyes -->
-      <ellipse cx="160" cy="195" rx="14" ry="18" fill="#1e293b"/>
-      <circle cx="155" cy="188" r="5" fill="#ffffff"/>
-      <ellipse cx="240" cy="195" rx="14" ry="18" fill="#1e293b"/>
-      <circle cx="235" cy="188" r="5" fill="#ffffff"/>
-      <!-- Cheeks -->
-      <circle cx="140" cy="225" r="16" fill="#fbcfe8"/>
-      <circle cx="260" cy="225" r="16" fill="#fbcfe8"/>
-      <!-- Nose & Mouth -->
-      <polygon points="194,215 206,215 200,224" fill="#f43f5e"/>
-      <path d="M200 224 Q185 242 170 232" fill="none" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
-      <path d="M200 224 Q215 242 230 232" fill="none" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
-      <!-- Whiskers -->
-      <line x1="130" y1="210" x2="80" y2="200" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
-      <line x1="130" y1="225" x2="75" y2="230" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
-      <line x1="270" y1="210" x2="320" y2="200" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
-      <line x1="270" y1="225" x2="325" y2="230" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#fdf4ff"/>
+      <!-- Stem & Leaves -->
+      <path d="M200 230 Q190 320 200 370" fill="none" stroke="#22c55e" stroke-width="12" stroke-linecap="round"/>
+      <path d="M195 300 Q140 280 150 320 Q180 320 195 305" fill="#22c55e" stroke="#16a34a" stroke-width="3"/>
+      <path d="M205 320 Q260 300 250 340 Q220 340 205 325" fill="#22c55e" stroke="#16a34a" stroke-width="3"/>
+      <!-- 6 Outer Pink Petals -->
+      <circle cx="200" cy="110" r="42" fill="#f472b6" stroke="#db2777" stroke-width="4"/>
+      <circle cx="265" cy="145" r="42" fill="#f472b6" stroke="#db2777" stroke-width="4"/>
+      <circle cx="265" cy="225" r="42" fill="#f472b6" stroke="#db2777" stroke-width="4"/>
+      <circle cx="200" cy="260" r="42" fill="#f472b6" stroke="#db2777" stroke-width="4"/>
+      <circle cx="135" cy="225" r="42" fill="#f472b6" stroke="#db2777" stroke-width="4"/>
+      <circle cx="135" cy="145" r="42" fill="#f472b6" stroke="#db2777" stroke-width="4"/>
+      <!-- Yellow Center Face -->
+      <circle cx="200" cy="185" r="55" fill="#fde047" stroke="#eab308" stroke-width="6"/>
+      <!-- Eyes & Cheeks -->
+      <circle cx="180" cy="175" r="7" fill="#1e293b"/>
+      <circle cx="178" cy="172" r="2.5" fill="#ffffff"/>
+      <circle cx="220" cy="175" r="7" fill="#1e293b"/>
+      <circle cx="218" cy="172" r="2.5" fill="#ffffff"/>
+      <circle cx="168" cy="190" r="8" fill="#f43f5e" opacity="0.6"/>
+      <circle cx="232" cy="190" r="8" fill="#f43f5e" opacity="0.6"/>
+      <!-- Happy Smile -->
+      <path d="M190 192 Q200 206 210 192" fill="none" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'easy-2',
-    title: 'Boba Milk Tea',
+    title: 'Cute Cartoon Owl',
     difficulty: 'easy',
-    category: 'Food',
-    hint: 'Draw the angled cup, domed lid, giant straw, and round black pearls at the bottom!',
-    palette: ['#d97706', '#92400e', '#fef3c7', '#3b82f6', '#18181b'],
+    category: 'Animals',
+    hint: 'Chubby round body, giant yellow eyes, pointy ear tufts, orange beak, and branch!',
+    palette: ['#8b5cf6', '#a855f7', '#facc15', '#f97316', '#1e1b4b'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#fffbeb"/>
-      <!-- Straw -->
-      <rect x="185" y="40" width="30" height="260" rx="10" transform="rotate(12 200 170)" fill="#60a5fa" stroke="#1e293b" stroke-width="7"/>
-      <!-- Cup Body -->
-      <polygon points="120,130 280,130 255,340 145,340" fill="#fde68a" stroke="#1e293b" stroke-width="8" stroke-linejoin="round"/>
-      <!-- Milk tea level -->
-      <polygon points="124,155 276,155 253,336 147,336" fill="#f59e0b" opacity="0.85"/>
-      <!-- Boba pearls -->
-      <circle cx="170" cy="310" r="16" fill="#18181b"/>
-      <circle cx="205" cy="315" r="16" fill="#18181b"/>
-      <circle cx="230" cy="300" r="16" fill="#18181b"/>
-      <circle cx="160" cy="275" r="15" fill="#18181b"/>
-      <circle cx="195" cy="280" r="15" fill="#18181b"/>
-      <circle cx="235" cy="265" r="15" fill="#18181b"/>
-      <!-- Cup Lid -->
-      <ellipse cx="200" cy="130" rx="85" ry="24" fill="#ffffff" stroke="#1e293b" stroke-width="8"/>
-      <!-- Cute Face on Cup -->
-      <circle cx="175" cy="210" r="6" fill="#1e293b"/>
-      <circle cx="225" cy="210" r="6" fill="#1e293b"/>
-      <circle cx="165" cy="222" r="8" fill="#f43f5e" opacity="0.6"/>
-      <circle cx="235" cy="222" r="8" fill="#f43f5e" opacity="0.6"/>
-      <path d="M192 218 Q200 228 208 218" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#1e1b4b"/>
+      <!-- Night Stars -->
+      <circle cx="80" cy="70" r="3" fill="#fde047"/>
+      <circle cx="320" cy="90" r="4" fill="#fde047"/>
+      <circle cx="340" cy="280" r="3" fill="#ffffff"/>
+      <!-- Tree Branch -->
+      <path d="M50 320 Q200 300 350 320" fill="none" stroke="#78350f" stroke-width="18" stroke-linecap="round"/>
+      <!-- Owl Body & Head -->
+      <ellipse cx="200" cy="205" rx="90" ry="105" fill="#8b5cf6" stroke="#6d28d9" stroke-width="6"/>
+      <!-- Ear Horns -->
+      <polygon points="125,120 140,65 175,115" fill="#7c3aed"/>
+      <polygon points="275,120 260,65 225,115" fill="#7c3aed"/>
+      <!-- Light Belly Patch -->
+      <ellipse cx="200" cy="240" rx="55" ry="60" fill="#ddd6fe"/>
+      <!-- Belly Feather V-patterns -->
+      <path d="M185 220 L195 230 L205 220" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round"/>
+      <path d="M195 245 L205 255 L215 245" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round"/>
+      <!-- Giant Eyes -->
+      <circle cx="160" cy="165" r="32" fill="#ffffff" stroke="#6d28d9" stroke-width="4"/>
+      <circle cx="160" cy="165" r="18" fill="#facc15"/>
+      <circle cx="160" cy="165" r="10" fill="#1e1b4b"/>
+      <circle cx="156" cy="160" r="4" fill="#ffffff"/>
+      <circle cx="240" cy="165" r="32" fill="#ffffff" stroke="#6d28d9" stroke-width="4"/>
+      <circle cx="240" cy="165" r="18" fill="#facc15"/>
+      <circle cx="240" cy="165" r="10" fill="#1e1b4b"/>
+      <circle cx="236" cy="160" r="4" fill="#ffffff"/>
+      <!-- Orange Beak -->
+      <polygon points="190,175 210,175 200,200" fill="#f97316"/>
+      <!-- Claws / Feet -->
+      <ellipse cx="180" cy="305" rx="10" ry="6" fill="#f97316"/>
+      <ellipse cx="220" cy="305" rx="10" ry="6" fill="#f97316"/>
     </svg>`,
   },
   {
     id: 'easy-3',
-    title: 'Happy Avocado',
+    title: 'Mithu the Parrot',
     difficulty: 'easy',
-    category: 'Food',
-    hint: 'Pear-shaped outer green skin, lighter green flesh, and a big round brown seed with a smiling face!',
-    palette: ['#15803d', '#86efac', '#78350f', '#f43f5e', '#1e293b'],
+    category: 'Animals',
+    hint: 'Vibrant green cartoon parrot, big curved red beak, yellow ring collar, and tail feathers!',
+    palette: ['#22c55e', '#ef4444', '#facc15', '#0ea5e9', '#1e293b'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#f0fdf4"/>
-      <!-- Outer Shell -->
-      <path d="M200 60 C250 60 270 120 290 180 C320 270 290 350 200 350 C110 350 80 270 110 180 C130 120 150 60 200 60 Z" fill="#166534" stroke="#14532d" stroke-width="8"/>
-      <!-- Inner Flesh -->
-      <path d="M200 80 C238 80 253 130 270 185 C295 260 270 330 200 330 C130 330 105 260 130 185 C147 130 162 80 200 80 Z" fill="#bbf7d0"/>
-      <!-- Seed / Pit -->
-      <circle cx="200" cy="235" r="58" fill="#78350f" stroke="#451a03" stroke-width="6"/>
-      <ellipse cx="180" cy="210" rx="14" ry="8" fill="#92400e" opacity="0.6"/>
-      <!-- Face on Seed -->
-      <circle cx="180" cy="230" r="7" fill="#ffffff"/>
-      <circle cx="180" cy="230" r="4" fill="#000000"/>
-      <circle cx="220" cy="230" r="7" fill="#ffffff"/>
-      <circle cx="220" cy="230" r="4" fill="#000000"/>
-      <circle cx="168" cy="245" r="7" fill="#f43f5e" opacity="0.7"/>
-      <circle cx="232" cy="245" r="7" fill="#f43f5e" opacity="0.7"/>
-      <path d="M190 246 Q200 258 210 246" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#ecfdf5"/>
+      <!-- Wooden Perch -->
+      <circle cx="200" cy="200" r="140" fill="none" stroke="#d97706" stroke-width="12"/>
+      <!-- Tail Feathers -->
+      <path d="M190 280 Q170 360 160 380 Q185 360 200 300" fill="#0ea5e9"/>
+      <path d="M200 280 Q190 370 180 390 Q205 370 210 300" fill="#22c55e"/>
+      <!-- Body & Head -->
+      <ellipse cx="200" cy="180" rx="55" ry="80" fill="#22c55e" stroke="#15803d" stroke-width="5"/>
+      <circle cx="200" cy="130" r="45" fill="#22c55e" stroke="#15803d" stroke-width="5"/>
+      <!-- Red Neck Ring -->
+      <path d="M165 155 Q200 170 235 155" fill="none" stroke="#ef4444" stroke-width="8" stroke-linecap="round"/>
+      <!-- Curved Big Red Beak -->
+      <path d="M230 115 C265 115 275 140 250 160 C240 145 230 140 220 135 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="4"/>
+      <!-- Eye -->
+      <circle cx="195" cy="120" r="14" fill="#ffffff" stroke="#15803d" stroke-width="3"/>
+      <circle cx="195" cy="120" r="6" fill="#1e293b"/>
+      <circle cx="193" cy="117" r="2" fill="#ffffff"/>
+      <!-- Wing -->
+      <path d="M165 190 C150 230 180 270 205 250 C215 220 195 190 165 190 Z" fill="#16a34a" stroke="#15803d" stroke-width="4"/>
+      <!-- Feet gripping perch -->
+      <ellipse cx="190" cy="260" rx="8" ry="5" fill="#f59e0b"/>
+      <ellipse cx="210" cy="260" rx="8" ry="5" fill="#f59e0b"/>
     </svg>`,
   },
   {
     id: 'easy-4',
-    title: 'Retro Gamepad',
+    title: 'Cute Small Baby',
     difficulty: 'easy',
-    category: 'Gaming',
-    hint: 'Rounded controller body, D-pad on the left, colorful ABXY action buttons on the right!',
-    palette: ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#334155'],
+    category: 'People',
+    hint: 'Chubby smiling baby face, big eyes, cute pink pacifier, and a curl of hair on top!',
+    palette: ['#fbcfe8', '#38bdf8', '#fbbf24', '#f43f5e', '#1e293b'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#f8fafc"/>
-      <!-- Wire -->
-      <path d="M200 135 C200 70 240 60 270 80" fill="none" stroke="#64748b" stroke-width="8" stroke-linecap="round"/>
-      <!-- Controller Body -->
-      <rect x="70" y="130" width="260" height="150" rx="45" fill="#e2e8f0" stroke="#1e293b" stroke-width="8"/>
-      <!-- Grip Indents -->
-      <path d="M80 205 Q120 280 150 280 L250 280 Q280 280 320 205" fill="#cbd5e1"/>
-      <!-- D-Pad -->
-      <rect x="110" y="180" width="60" height="22" rx="4" fill="#1e293b"/>
-      <rect x="129" y="161" width="22" height="60" rx="4" fill="#1e293b"/>
-      <circle cx="140" cy="191" r="5" fill="#475569"/>
-      <!-- Action Buttons -->
-      <circle cx="260" cy="170" r="12" fill="#ef4444" stroke="#1e293b" stroke-width="3"/>
-      <circle cx="285" cy="195" r="12" fill="#3b82f6" stroke="#1e293b" stroke-width="3"/>
-      <circle cx="235" cy="195" r="12" fill="#10b981" stroke="#1e293b" stroke-width="3"/>
-      <circle cx="260" cy="220" r="12" fill="#f59e0b" stroke="#1e293b" stroke-width="3"/>
-      <!-- Center Select / Start -->
-      <rect x="180" y="225" width="16" height="6" rx="2" fill="#475569" transform="rotate(-25 188 228)"/>
-      <rect x="204" y="225" width="16" height="6" rx="2" fill="#475569" transform="rotate(-25 212 228)"/>
+      <rect width="400" height="400" rx="30" fill="#fdf2f8"/>
+      <!-- Baby Bib / Onesie -->
+      <path d="M130 280 C130 250 270 250 270 280 L280 370 L120 370 Z" fill="#bae6fd" stroke="#0284c7" stroke-width="6"/>
+      <path d="M160 255 Q200 285 240 255" fill="none" stroke="#f472b6" stroke-width="10" stroke-linecap="round"/>
+      <!-- Cute Curl of Hair -->
+      <path d="M200 90 Q215 60 200 50 Q185 60 200 75" fill="none" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+      <!-- Round Head -->
+      <circle cx="200" cy="180" r="95" fill="#fed7aa" stroke="#ea580c" stroke-width="6"/>
+      <!-- Cute Ears -->
+      <circle cx="105" cy="180" r="18" fill="#fed7aa" stroke="#ea580c" stroke-width="5"/>
+      <circle cx="295" cy="180" r="18" fill="#fed7aa" stroke="#ea580c" stroke-width="5"/>
+      <!-- Big Sparkling Eyes -->
+      <ellipse cx="165" cy="165" rx="14" ry="18" fill="#1e293b"/>
+      <circle cx="160" cy="158" r="5" fill="#ffffff"/>
+      <ellipse cx="235" cy="165" rx="14" ry="18" fill="#1e293b"/>
+      <circle cx="230" cy="158" r="5" fill="#ffffff"/>
+      <!-- Rosy Blush Cheeks -->
+      <circle cx="145" cy="195" r="14" fill="#f43f5e" opacity="0.6"/>
+      <circle cx="255" cy="195" r="14" fill="#f43f5e" opacity="0.6"/>
+      <!-- Cute Baby Pacifier / Dummy -->
+      <circle cx="200" cy="215" r="24" fill="#ec4899" stroke="#be185d" stroke-width="4"/>
+      <circle cx="200" cy="215" r="12" fill="#ffffff"/>
+      <circle cx="200" cy="238" r="10" fill="none" stroke="#ec4899" stroke-width="5"/>
     </svg>`,
   },
   {
     id: 'easy-5',
-    title: 'Spooky Little Ghost',
+    title: 'Peppa Pig',
     difficulty: 'easy',
-    category: 'Magic',
-    hint: 'Wavy sheet silhouette, cute floating arms, giant dark oval eyes with starry sparkles!',
-    palette: ['#6366f1', '#a855f7', '#38bdf8', '#f43f5e', '#ffffff'],
+    category: 'Cartoon',
+    hint: 'Iconic pink whistle-shaped snout, red dress, two round eyes at top, and curly pink tail!',
+    palette: ['#f472b6', '#ef4444', '#fbcfe8', '#1e293b', '#38bdf8'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#1e1b4b"/>
-      <!-- Stars in background -->
-      <polygon points="90,90 95,105 110,110 95,115 90,130 85,115 70,110 85,105" fill="#fde047"/>
-      <polygon points="310,70 314,80 325,85 314,90 310,100 306,90 295,85 306,80" fill="#fde047"/>
-      <polygon points="320,290 323,298 332,302 323,306 320,314 317,306 308,302 317,298" fill="#fde047"/>
-      <!-- Ghost Body -->
-      <path d="M120 220 Q90 190 85 170 Q80 155 95 155 Q115 160 135 185 C135 100 170 70 200 70 C230 70 265 100 265 185 Q285 160 305 155 Q320 155 315 170 Q310 190 280 220 C280 270 285 320 270 330 Q250 310 230 330 Q200 310 170 330 Q150 310 130 330 C115 320 120 270 120 220 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="6"/>
-      <!-- Ghost Eyes -->
-      <ellipse cx="175" cy="165" rx="14" ry="20" fill="#1e1b4b"/>
-      <circle cx="170" cy="155" r="5" fill="#ffffff"/>
-      <ellipse cx="225" cy="165" rx="14" ry="20" fill="#1e1b4b"/>
-      <circle cx="220" cy="155" r="5" fill="#ffffff"/>
-      <!-- Blush & Smile -->
-      <ellipse cx="150" cy="185" rx="12" ry="7" fill="#f43f5e" opacity="0.6"/>
-      <ellipse cx="250" cy="185" rx="12" ry="7" fill="#f43f5e" opacity="0.6"/>
-      <ellipse cx="200" cy="185" rx="8" ry="12" fill="#1e1b4b"/>
+      <rect width="400" height="400" rx="30" fill="#e0f2fe"/>
+      <!-- Peppa Red Dress Body -->
+      <path d="M150 240 Q200 230 250 240 L285 360 L115 360 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="6"/>
+      <!-- Thin Legs & Black Shoes -->
+      <line x1="165" y1="360" x2="165" y2="385" stroke="#1e293b" stroke-width="6"/>
+      <ellipse cx="155" cy="385" rx="15" ry="6" fill="#1e293b"/>
+      <line x1="235" y1="360" x2="235" y2="385" stroke="#1e293b" stroke-width="6"/>
+      <ellipse cx="225" cy="385" rx="15" ry="6" fill="#1e293b"/>
+      <!-- Arms -->
+      <path d="M135 270 L80 290" stroke="#f472b6" stroke-width="6" stroke-linecap="round"/>
+      <path d="M265 270 L320 290" stroke="#f472b6" stroke-width="6" stroke-linecap="round"/>
+      <!-- Pig Ears -->
+      <ellipse cx="180" cy="75" rx="12" ry="24" fill="#fbcfe8" stroke="#f472b6" stroke-width="5" transform="rotate(-15 180 75)"/>
+      <ellipse cx="225" cy="75" rx="12" ry="24" fill="#fbcfe8" stroke="#f472b6" stroke-width="5" transform="rotate(15 225 75)"/>
+      <!-- Peppa Snout & Head -->
+      <path d="M150 160 C130 120 180 90 230 90 C280 90 300 130 270 160 C280 165 310 160 320 170 C330 180 320 200 300 205 C270 215 220 240 170 220 C130 200 130 170 150 160 Z" fill="#fbcfe8" stroke="#f472b6" stroke-width="6"/>
+      <!-- Snout Nostrils -->
+      <circle cx="300" cy="180" r="4" fill="#f43f5e"/>
+      <circle cx="312" cy="185" r="4" fill="#f43f5e"/>
+      <!-- Eyes on Top of Head -->
+      <circle cx="195" cy="115" r="14" fill="#ffffff" stroke="#f472b6" stroke-width="3"/>
+      <circle cx="195" cy="115" r="5" fill="#1e293b"/>
+      <circle cx="230" cy="120" r="14" fill="#ffffff" stroke="#f472b6" stroke-width="3"/>
+      <circle cx="230" cy="120" r="5" fill="#1e293b"/>
+      <!-- Pink Cheek & Smile -->
+      <circle cx="170" cy="180" r="18" fill="#f472b6" opacity="0.8"/>
+      <path d="M210 185 Q235 205 255 185" fill="none" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'easy-6',
-    title: 'Warm Coffee Mug',
+    title: 'Pikachu Face',
     difficulty: 'easy',
-    category: 'Food',
-    hint: 'Cylindrical mug with curved handle, rich brown coffee top, and wispy steam curls!',
-    palette: ['#ef4444', '#b91c1c', '#78350f', '#f97316', '#ffffff'],
+    category: 'Anime',
+    hint: 'Yellow electric mouse face with long black-tipped ears, bright red cheeks, and cute W-mouth!',
+    palette: ['#facc15', '#ef4444', '#78350f', '#1e293b', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#fff7ed"/>
-      <!-- Steam -->
-      <path d="M170 120 Q155 80 175 50" fill="none" stroke="#fdba74" stroke-width="6" stroke-linecap="round"/>
-      <path d="M200 110 Q220 70 200 40" fill="none" stroke="#fb923c" stroke-width="7" stroke-linecap="round"/>
-      <path d="M230 120 Q245 80 225 50" fill="none" stroke="#fdba74" stroke-width="6" stroke-linecap="round"/>
-      <!-- Handle -->
-      <path d="M260 170 C330 170 330 270 260 270" fill="none" stroke="#dc2626" stroke-width="26" stroke-linecap="round"/>
-      <path d="M260 170 C315 170 315 270 260 270" fill="none" stroke="#fff7ed" stroke-width="12" stroke-linecap="round"/>
-      <!-- Mug Body -->
-      <path d="M120 150 L130 310 C130 330 270 330 270 310 L280 150 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="6"/>
-      <!-- Top Rim / Coffee surface -->
-      <ellipse cx="200" cy="150" rx="80" ry="24" fill="#dc2626" stroke="#b91c1c" stroke-width="6"/>
-      <ellipse cx="200" cy="150" rx="70" ry="18" fill="#582900"/>
-      <!-- Heart Latte Art -->
-      <path d="M200 152 C190 142 178 147 182 156 C186 163 200 168 200 168 C200 168 214 163 218 156 C222 147 210 142 200 152 Z" fill="#fef3c7"/>
-      <!-- Cute Star on Mug -->
-      <polygon points="200,215 206,230 222,230 210,240 214,255 200,246 186,255 190,240 178,230 194,230" fill="#fde047"/>
+      <rect width="400" height="400" rx="30" fill="#fefce8"/>
+      <!-- Pointy Ears with Black Tips -->
+      <polygon points="120,150 60,40 150,110" fill="#facc15" stroke="#ca8a04" stroke-width="4"/>
+      <polygon points="60,40 75,65 95,55" fill="#1e293b"/>
+      <polygon points="280,150 340,40 250,110" fill="#facc15" stroke="#ca8a04" stroke-width="4"/>
+      <polygon points="340,40 325,65 305,55" fill="#1e293b"/>
+      <!-- Round Yellow Head -->
+      <ellipse cx="200" cy="215" rx="110" ry="95" fill="#facc15" stroke="#ca8a04" stroke-width="6"/>
+      <!-- Big Sparkling Eyes -->
+      <circle cx="155" cy="190" r="18" fill="#1e293b"/>
+      <circle cx="150" cy="184" r="7" fill="#ffffff"/>
+      <circle cx="245" cy="190" r="18" fill="#1e293b"/>
+      <circle cx="240" cy="184" r="7" fill="#ffffff"/>
+      <!-- Tiny Nose -->
+      <polygon points="196,210 204,210 200,216" fill="#1e293b"/>
+      <!-- Bright Red Cheeks -->
+      <circle cx="130" cy="235" r="22" fill="#ef4444"/>
+      <circle cx="270" cy="235" r="22" fill="#ef4444"/>
+      <!-- Cute Cat-like Smile -->
+      <path d="M185 224 Q193 234 200 226 Q207 234 215 224" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'easy-7',
-    title: 'Yummy Pizza Slice',
+    title: 'Hello Kitty',
     difficulty: 'easy',
-    category: 'Food',
-    hint: 'Triangular yellow cheese slice, bubbly crust at top, red pepperoni circles and melting cheese drips!',
-    palette: ['#f59e0b', '#dc2626', '#d97706', '#15803d', '#ffffff'],
+    category: 'Cartoon',
+    hint: 'Pure white cat head, triangle ears, big red bow on right ear, oval eyes, and yellow nose!',
+    palette: ['#ef4444', '#facc15', '#1e293b', '#ffffff', '#fbcfe8'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#fefce8"/>
-      <!-- Crust -->
-      <path d="M90 100 Q200 60 310 100 Q290 135 200 120 Q110 135 90 100 Z" fill="#d97706" stroke="#b45309" stroke-width="6"/>
-      <!-- Cheese Body -->
-      <polygon points="100,110 300,110 200,340" fill="#fbbf24" stroke="#d97706" stroke-width="6" stroke-linejoin="round"/>
-      <!-- Pepperoni -->
-      <circle cx="160" cy="160" r="22" fill="#dc2626" stroke="#991b1b" stroke-width="4"/>
-      <circle cx="230" cy="180" r="20" fill="#dc2626" stroke="#991b1b" stroke-width="4"/>
-      <circle cx="190" cy="240" r="18" fill="#dc2626" stroke="#991b1b" stroke-width="4"/>
-      <!-- Basil leaves -->
-      <ellipse cx="205" cy="140" rx="10" ry="6" fill="#16a34a" transform="rotate(30 205 140)"/>
-      <ellipse cx="150" cy="220" rx="12" ry="7" fill="#16a34a" transform="rotate(-40 150 220)"/>
-      <!-- Face on Pizza -->
-      <circle cx="185" cy="290" r="4" fill="#1e293b"/>
-      <circle cx="215" cy="290" r="4" fill="#1e293b"/>
-      <path d="M194 298 Q200 305 206 298" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#fdf2f8"/>
+      <!-- Ears -->
+      <polygon points="105,150 115,75 170,120" fill="#ffffff" stroke="#1e293b" stroke-width="8" stroke-linejoin="round"/>
+      <polygon points="295,150 285,75 230,120" fill="#ffffff" stroke="#1e293b" stroke-width="8" stroke-linejoin="round"/>
+      <!-- Head Base -->
+      <ellipse cx="200" cy="210" rx="125" ry="95" fill="#ffffff" stroke="#1e293b" stroke-width="8"/>
+      <!-- Red Bow on Right Ear -->
+      <circle cx="270" cy="120" r="16" fill="#ef4444" stroke="#1e293b" stroke-width="6"/>
+      <polygon points="270,120 320,95 315,145" fill="#ef4444" stroke="#1e293b" stroke-width="6" stroke-linejoin="round"/>
+      <polygon points="270,120 220,95 225,145" fill="#ef4444" stroke="#1e293b" stroke-width="6" stroke-linejoin="round"/>
+      <!-- Oval Black Eyes -->
+      <ellipse cx="150" cy="205" rx="8" ry="12" fill="#1e293b"/>
+      <ellipse cx="250" cy="205" rx="8" ry="12" fill="#1e293b"/>
+      <!-- Yellow Oval Nose -->
+      <ellipse cx="200" cy="225" rx="12" ry="8" fill="#facc15" stroke="#1e293b" stroke-width="4"/>
+      <!-- 3 Whiskers on Each Side -->
+      <line x1="100" y1="195" x2="60" y2="185" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+      <line x1="95" y1="215" x2="55" y2="215" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+      <line x1="100" y1="235" x2="60" y2="245" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+      <line x1="300" y1="195" x2="340" y2="185" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+      <line x1="305" y1="215" x2="345" y2="215" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+      <line x1="300" y1="235" x2="340" y2="245" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'easy-8',
-    title: 'Space Rocket',
+    title: 'Winnie the Pooh',
     difficulty: 'easy',
-    category: 'Sci-Fi',
-    hint: 'Pointy rocket cylinder, round blue portal window, side fins, and blazing fire trail!',
-    palette: ['#3b82f6', '#ef4444', '#f97316', '#facc15', '#ffffff'],
+    category: 'Cartoon',
+    hint: 'Chubby honey-loving yellow bear with round ears, red crop shirt, and cute dark nose!',
+    palette: ['#f59e0b', '#dc2626', '#1e293b', '#fef3c7', '#78350f'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#0f172a"/>
-      <!-- Stars -->
-      <circle cx="80" cy="80" r="3" fill="#ffffff"/>
-      <circle cx="320" cy="120" r="4" fill="#ffffff"/>
-      <circle cx="70" cy="260" r="3" fill="#ffffff"/>
-      <!-- Exhaust Flame -->
-      <polygon points="175,270 200,360 225,270" fill="#ef4444"/>
-      <polygon points="183,270 200,330 217,270" fill="#f97316"/>
-      <polygon points="190,270 200,305 210,270" fill="#facc15"/>
-      <!-- Left & Right Fins -->
-      <path d="M150 210 L105 270 L150 260 Z" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
-      <path d="M250 210 L295 270 L250 260 Z" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
-      <!-- Rocket Body -->
-      <path d="M200 60 C230 110 245 190 245 270 L155 270 C155 190 170 110 200 60 Z" fill="#f8fafc" stroke="#334155" stroke-width="6"/>
-      <!-- Nose Cone -->
-      <path d="M200 60 C218 90 228 120 230 130 L170 130 C172 120 182 90 200 60 Z" fill="#ef4444"/>
-      <!-- Window Porthole -->
-      <circle cx="200" cy="180" r="28" fill="#38bdf8" stroke="#1e293b" stroke-width="6"/>
-      <circle cx="200" cy="180" r="20" fill="#0284c7"/>
-      <ellipse cx="192" cy="172" rx="8" ry="4" fill="#ffffff" transform="rotate(-30 192 172)"/>
+      <rect width="400" height="400" rx="30" fill="#fffbeb"/>
+      <!-- Red Shirt Body -->
+      <path d="M120 280 C120 240 280 240 280 280 L290 380 L110 380 Z" fill="#dc2626" stroke="#991b1b" stroke-width="6"/>
+      <!-- Round Ears -->
+      <circle cx="135" cy="115" r="28" fill="#f59e0b" stroke="#d97706" stroke-width="5"/>
+      <circle cx="265" cy="115" r="28" fill="#f59e0b" stroke="#d97706" stroke-width="5"/>
+      <!-- Head -->
+      <circle cx="200" cy="180" r="85" fill="#f59e0b" stroke="#d97706" stroke-width="6"/>
+      <!-- Pooh Snout / Muzzle -->
+      <ellipse cx="200" cy="205" rx="42" ry="32" fill="#fbbf24"/>
+      <!-- Eyes & Eyebrows -->
+      <path d="M160 145 Q170 140 180 145" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+      <path d="M220 145 Q230 140 240 145" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="170" cy="165" rx="6" ry="8" fill="#1e293b"/>
+      <ellipse cx="230" cy="165" rx="6" ry="8" fill="#1e293b"/>
+      <!-- Dark Nose -->
+      <ellipse cx="200" cy="195" rx="14" ry="9" fill="#1e293b"/>
+      <!-- Sweet Smile -->
+      <path d="M185 215 Q200 228 215 215" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'easy-9',
-    title: 'Ringed Planet Saturn',
+    title: 'Tweety Bird',
     difficulty: 'easy',
-    category: 'Sci-Fi',
-    hint: 'Giant glowing violet planet orb intersected by a wide angled golden ring disk!',
-    palette: ['#8b5cf6', '#6366f1', '#fbbf24', '#f472b6', '#38bdf8'],
+    category: 'Cartoon',
+    hint: 'Giant round yellow head with 3 hairs on top, huge blue eyes, and orange curved beak!',
+    palette: ['#facc15', '#38bdf8', '#f97316', '#1e293b', '#fef08a'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#09090b"/>
-      <!-- Distant Stars -->
-      <circle cx="100" cy="70" r="2" fill="#ffffff"/>
-      <circle cx="300" cy="90" r="3" fill="#ffffff"/>
-      <circle cx="340" cy="310" r="2" fill="#ffffff"/>
-      <circle cx="70" cy="330" r="3" fill="#ffffff"/>
-      <!-- Back of Ring -->
-      <ellipse cx="200" cy="200" rx="160" ry="40" fill="none" stroke="#f59e0b" stroke-width="24" transform="rotate(-20 200 200)"/>
-      <ellipse cx="200" cy="200" rx="145" ry="34" fill="none" stroke="#fef08a" stroke-width="8" transform="rotate(-20 200 200)"/>
-      <!-- Planet Sphere -->
-      <circle cx="200" cy="200" r="85" fill="#8b5cf6"/>
-      <path d="M120 180 Q200 215 280 180" fill="none" stroke="#a855f7" stroke-width="12" opacity="0.6"/>
-      <path d="M125 210 Q200 245 275 210" fill="none" stroke="#c084fc" stroke-width="16" opacity="0.7"/>
-      <path d="M140 240 Q200 270 260 240" fill="none" stroke="#ec4899" stroke-width="10" opacity="0.5"/>
-      <!-- Front of Ring (clipped) -->
-      <path d="M50 236 C90 300 270 230 350 164" fill="none" stroke="#f59e0b" stroke-width="24"/>
-      <path d="M60 234 C95 295 265 230 340 166" fill="none" stroke="#fef08a" stroke-width="8"/>
+      <rect width="400" height="400" rx="30" fill="#f0f9ff"/>
+      <!-- 3 Hairs on Head -->
+      <line x1="200" y1="75" x2="200" y2="45" stroke="#ca8a04" stroke-width="4" stroke-linecap="round"/>
+      <line x1="190" y1="80" x2="180" y2="50" stroke="#ca8a04" stroke-width="4" stroke-linecap="round"/>
+      <line x1="210" y1="80" x2="220" y2="50" stroke="#ca8a04" stroke-width="4" stroke-linecap="round"/>
+      <!-- Small Body & Big Orange Feet -->
+      <ellipse cx="200" cy="310" rx="35" ry="45" fill="#facc15" stroke="#ca8a04" stroke-width="4"/>
+      <ellipse cx="160" cy="365" rx="32" ry="14" fill="#f97316" stroke="#ea580c" stroke-width="4"/>
+      <ellipse cx="240" cy="365" rx="32" ry="14" fill="#f97316" stroke="#ea580c" stroke-width="4"/>
+      <!-- Giant Yellow Head -->
+      <ellipse cx="200" cy="175" rx="105" ry="105" fill="#facc15" stroke="#ca8a04" stroke-width="6"/>
+      <!-- Chubby Cheeks -->
+      <ellipse cx="120" cy="220" rx="25" ry="20" fill="#facc15"/>
+      <ellipse cx="280" cy="220" rx="25" ry="20" fill="#facc15"/>
+      <!-- Big Blue Cartoon Eyes -->
+      <ellipse cx="160" cy="165" rx="28" ry="40" fill="#ffffff" stroke="#ca8a04" stroke-width="3"/>
+      <ellipse cx="160" cy="165" rx="16" ry="25" fill="#38bdf8"/>
+      <ellipse cx="160" cy="165" rx="8" ry="14" fill="#1e293b"/>
+      <circle cx="156" cy="155" r="4" fill="#ffffff"/>
+      <ellipse cx="240" cy="165" rx="28" ry="40" fill="#ffffff" stroke="#ca8a04" stroke-width="3"/>
+      <ellipse cx="240" cy="165" rx="16" ry="25" fill="#38bdf8"/>
+      <ellipse cx="240" cy="165" rx="8" ry="14" fill="#1e293b"/>
+      <circle cx="236" cy="155" r="4" fill="#ffffff"/>
+      <!-- Eyelashes -->
+      <line x1="140" y1="130" x2="125" y2="115" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <line x1="260" y1="130" x2="275" y2="115" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <!-- Cute Orange Beak -->
+      <path d="M185 205 Q200 230 215 205 Z" fill="#f97316" stroke="#ea580c" stroke-width="3"/>
     </svg>`,
   },
   {
     id: 'easy-10',
-    title: 'Rubber Ducky',
+    title: 'Cute Baby Panda',
     difficulty: 'easy',
     category: 'Animals',
-    hint: 'Bright yellow duck silhouette, big orange beak, round head, and wing curve on water ripples!',
-    palette: ['#facc15', '#f97316', '#38bdf8', '#0284c7', '#1e293b'],
+    hint: 'Round white panda face with big black eye patches, black round ears, and bamboo leaf!',
+    palette: ['#1e293b', '#ffffff', '#22c55e', '#fbcfe8', '#cbd5e1'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#e0f2fe"/>
-      <!-- Water Waves -->
-      <path d="M50 320 Q100 300 150 320 T250 320 T350 320" fill="none" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/>
-      <path d="M80 345 Q130 330 180 345 T280 345 T380 345" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
-      <!-- Duck Body -->
-      <path d="M130 200 C100 200 80 240 100 280 C120 310 250 320 280 280 C300 250 280 220 230 220" fill="#facc15" stroke="#ca8a04" stroke-width="6"/>
-      <path d="M280 280 C310 260 325 235 320 220 C300 235 285 245 265 250" fill="#eab308"/>
-      <!-- Duck Head -->
-      <circle cx="160" cy="150" r="55" fill="#facc15" stroke="#ca8a04" stroke-width="6"/>
-      <!-- Eye -->
-      <circle cx="140" cy="135" r="8" fill="#1e293b"/>
-      <circle cx="137" cy="132" r="3" fill="#ffffff"/>
-      <!-- Beak -->
-      <path d="M120 145 C90 140 70 155 75 165 C85 175 118 170 120 170 Z" fill="#f97316" stroke="#c2410c" stroke-width="4"/>
-      <!-- Wing -->
-      <path d="M180 235 Q225 210 250 250 Q210 275 180 235 Z" fill="#eab308" stroke="#ca8a04" stroke-width="4"/>
+      <rect width="400" height="400" rx="30" fill="#f0fdf4"/>
+      <!-- Black Round Ears -->
+      <circle cx="115" cy="105" r="35" fill="#1e293b"/>
+      <circle cx="285" cy="105" r="35" fill="#1e293b"/>
+      <!-- White Head -->
+      <circle cx="200" cy="195" r="105" fill="#ffffff" stroke="#1e293b" stroke-width="7"/>
+      <!-- Black Oval Eye Patches (Angled) -->
+      <ellipse cx="150" cy="180" rx="26" ry="34" fill="#1e293b" transform="rotate(-20 150 180)"/>
+      <circle cx="155" cy="178" r="6" fill="#ffffff"/>
+      <ellipse cx="250" cy="180" rx="26" ry="34" fill="#1e293b" transform="rotate(20 250 180)"/>
+      <circle cx="245" cy="178" r="6" fill="#ffffff"/>
+      <!-- Pink Cheeks -->
+      <circle cx="130" cy="225" r="14" fill="#fbcfe8"/>
+      <circle cx="270" cy="225" r="14" fill="#fbcfe8"/>
+      <!-- Nose & Mouth -->
+      <ellipse cx="200" cy="210" rx="14" ry="9" fill="#1e293b"/>
+      <path d="M200 219 L200 230" stroke="#1e293b" stroke-width="4"/>
+      <path d="M185 230 Q200 242 215 230" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <!-- Green Bamboo Leaf -->
+      <path d="M195 245 Q260 270 280 240 Q240 240 195 245" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
     </svg>`,
   },
 
-  // ================= MEDIUM (10 DRAWINGS) =================
+  // ================= MEDIUM (10 ICONIC POPULAR CARTOONS) =================
   {
     id: 'medium-1',
-    title: 'Astro Corgi',
+    title: 'Oggy the Cat',
     difficulty: 'medium',
-    category: 'Animals',
-    hint: 'Cute dog in astronaut helmet with glowing visor, antenna, and starry backpack!',
-    palette: ['#f59e0b', '#38bdf8', '#ef4444', '#f8fafc', '#1e293b'],
+    category: 'Cartoon',
+    hint: 'Famous blue cat with giant round red clown nose, green eyes, white gloves, and funny whiskers!',
+    palette: ['#38bdf8', '#0284c7', '#ef4444', '#22c55e', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#0f172a"/>
-      <!-- Helmet Antenna -->
-      <line x1="200" y1="90" x2="200" y2="45" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
-      <circle cx="200" cy="40" r="10" fill="#ef4444"/>
-      <!-- Spacesuit Body -->
-      <rect x="130" y="250" width="140" height="100" rx="40" fill="#e2e8f0" stroke="#475569" stroke-width="6"/>
-      <circle cx="200" cy="290" r="16" fill="#38bdf8"/>
-      <!-- Helmet Dome -->
-      <circle cx="200" cy="170" r="95" fill="#f1f5f9" stroke="#64748b" stroke-width="8"/>
-      <!-- Visor reflection -->
-      <ellipse cx="200" cy="170" rx="80" ry="65" fill="#1e293b"/>
-      <!-- Corgi Inside Visor -->
-      <polygon points="140,135 155,90 175,125" fill="#f59e0b"/>
-      <polygon points="260,135 245,90 225,125" fill="#f59e0b"/>
-      <circle cx="200" cy="175" r="55" fill="#f59e0b"/>
-      <path d="M185 155 C195 145 205 145 215 155 L200 205 Z" fill="#ffffff"/>
-      <!-- Eyes & Nose -->
-      <circle cx="178" cy="165" r="6" fill="#1e293b"/>
-      <circle cx="222" cy="165" r="6" fill="#1e293b"/>
-      <ellipse cx="200" cy="180" rx="7" ry="5" fill="#1e293b"/>
-      <!-- Cute Tongue -->
-      <path d="M196 188 Q200 200 204 188" fill="#f43f5e"/>
-      <!-- Glass reflection glint -->
-      <path d="M150 140 A 65 65 0 0 1 250 140" fill="none" stroke="#38bdf8" stroke-width="6" opacity="0.7" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#fef2f2"/>
+      <!-- Oggy Body -->
+      <ellipse cx="200" cy="300" rx="90" ry="80" fill="#38bdf8" stroke="#0284c7" stroke-width="6"/>
+      <ellipse cx="200" cy="315" rx="60" ry="55" fill="#ffffff"/>
+      <!-- Pointy Blue Ears -->
+      <polygon points="120,130 110,50 170,100" fill="#38bdf8" stroke="#0284c7" stroke-width="6"/>
+      <polygon points="280,130 290,50 230,100" fill="#38bdf8" stroke="#0284c7" stroke-width="6"/>
+      <!-- Oggy Head -->
+      <ellipse cx="200" cy="165" rx="95" ry="75" fill="#38bdf8" stroke="#0284c7" stroke-width="6"/>
+      <!-- Green Cartoon Eyes on top of head -->
+      <ellipse cx="170" cy="115" rx="20" ry="28" fill="#22c55e" stroke="#0284c7" stroke-width="4"/>
+      <circle cx="172" cy="115" r="7" fill="#1e293b"/>
+      <circle cx="168" cy="110" r="3" fill="#ffffff"/>
+      <ellipse cx="230" cy="115" rx="20" ry="28" fill="#22c55e" stroke="#0284c7" stroke-width="4"/>
+      <circle cx="228" cy="115" r="7" fill="#1e293b"/>
+      <circle cx="224" cy="110" r="3" fill="#ffffff"/>
+      <!-- Giant Round Red Clown Nose -->
+      <circle cx="200" cy="165" r="28" fill="#ef4444" stroke="#b91c1c" stroke-width="5"/>
+      <circle cx="192" cy="156" r="6" fill="#ffffff"/>
+      <!-- White Cheeks & Goofy Smile -->
+      <path d="M140 185 Q200 230 260 185" fill="none" stroke="#0284c7" stroke-width="6" stroke-linecap="round"/>
+      <!-- Whiskers -->
+      <line x1="140" y1="170" x2="80" y2="160" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
+      <line x1="140" y1="185" x2="75" y2="190" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
+      <line x1="260" y1="170" x2="320" y2="160" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
+      <line x1="260" y1="185" x2="325" y2="190" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'medium-2',
-    title: 'Retro Boombox',
+    title: 'Chhota Bheem',
     difficulty: 'medium',
-    category: 'Objects',
-    hint: 'Classic 80s stereo box with handle, dual speaker cones, cassette deck, and neon equalizers!',
-    palette: ['#ec4899', '#06b6d4', '#facc15', '#334155', '#0f172a'],
+    category: 'Cartoon',
+    hint: 'Hero of Dholakpur with orange dhoti, red tilak, golden bracelets, and holding his favorite yellow laddoo!',
+    palette: ['#f97316', '#ea580c', '#facc15', '#dc2626', '#78350f'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#1e1b4b"/>
-      <!-- Handle -->
-      <path d="M120 120 L120 70 L280 70 L280 120" fill="none" stroke="#ec4899" stroke-width="14" stroke-linecap="round"/>
-      <!-- Main Boombox Body -->
-      <rect x="60" y="120" width="280" height="190" rx="20" fill="#334155" stroke="#0f172a" stroke-width="8"/>
-      <!-- Accent stripes -->
-      <rect x="68" y="130" width="264" height="12" fill="#ec4899"/>
-      <!-- Left Speaker -->
-      <circle cx="125" cy="220" r="45" fill="#0f172a" stroke="#06b6d4" stroke-width="6"/>
-      <circle cx="125" cy="220" r="25" fill="#06b6d4"/>
-      <circle cx="125" cy="220" r="10" fill="#facc15"/>
-      <!-- Right Speaker -->
-      <circle cx="275" cy="220" r="45" fill="#0f172a" stroke="#06b6d4" stroke-width="6"/>
-      <circle cx="275" cy="220" r="25" fill="#06b6d4"/>
-      <circle cx="275" cy="220" r="10" fill="#facc15"/>
-      <!-- Center Cassette Window -->
-      <rect x="180" y="195" width="40" height="50" rx="6" fill="#1e293b" stroke="#94a3b8" stroke-width="3"/>
-      <circle cx="190" cy="220" r="4" fill="#ffffff"/>
-      <circle cx="210" cy="220" r="4" fill="#ffffff"/>
-      <!-- Equalizer Bars -->
-      <rect x="180" y="155" width="6" height="24" fill="#22c55e"/>
-      <rect x="190" y="163" width="6" height="16" fill="#facc15"/>
-      <rect x="200" y="150" width="6" height="29" fill="#ec4899"/>
-      <rect x="210" y="167" width="6" height="12" fill="#06b6d4"/>
+      <rect width="400" height="400" rx="30" fill="#fff7ed"/>
+      <!-- Orange Dhoti Body -->
+      <path d="M140 250 L260 250 L270 360 L130 360 Z" fill="#ea580c" stroke="#c2410c" stroke-width="6"/>
+      <line x1="200" y1="250" x2="200" y2="360" stroke="#c2410c" stroke-width="4"/>
+      <!-- Muscular Chest -->
+      <ellipse cx="200" cy="210" rx="65" ry="50" fill="#fed7aa" stroke="#ea580c" stroke-width="5"/>
+      <!-- Golden Laddoo in Hand -->
+      <circle cx="290" cy="240" r="22" fill="#facc15" stroke="#d97706" stroke-width="4"/>
+      <circle cx="285" cy="235" r="3" fill="#ffffff"/>
+      <!-- Round Head & Hair -->
+      <circle cx="200" cy="120" r="55" fill="#fed7aa" stroke="#ea580c" stroke-width="5"/>
+      <!-- Bheem Hair Tuft / Choti -->
+      <path d="M145 110 C140 60 260 60 255 110 C240 70 160 70 145 110 Z" fill="#1e293b"/>
+      <circle cx="200" cy="55" r="14" fill="#1e293b"/>
+      <!-- Red Tilak on Forehead -->
+      <line x1="200" y1="85" x2="200" y2="105" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="200" cy="110" r="3" fill="#facc15"/>
+      <!-- Bold Eyes & Eyebrows -->
+      <circle cx="180" cy="120" r="6" fill="#1e293b"/>
+      <circle cx="220" cy="120" r="6" fill="#1e293b"/>
+      <path d="M170 110 Q180 105 190 110" stroke="#1e293b" stroke-width="3" fill="none"/>
+      <path d="M210 110 Q220 105 230 110" stroke="#1e293b" stroke-width="3" fill="none"/>
+      <!-- Brave Smile -->
+      <path d="M188 140 Q200 152 212 140" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <!-- Gold Wristbands -->
+      <rect x="120" y="225" width="16" height="12" rx="3" fill="#facc15" stroke="#d97706" stroke-width="2"/>
+      <rect x="264" y="225" width="16" height="12" rx="3" fill="#facc15" stroke="#d97706" stroke-width="2"/>
     </svg>`,
   },
   {
     id: 'medium-3',
-    title: 'Magic Potion Flask',
+    title: 'Doraemon',
     difficulty: 'medium',
-    category: 'Magic',
-    hint: 'Glass corked round flask filled with glowing magenta potion, bubbles, and floating stars!',
-    palette: ['#d946ef', '#8b5cf6', '#38bdf8', '#facc15', '#f8fafc'],
+    category: 'Anime',
+    hint: 'Blue robotic cat with round white belly, red collar with golden bell, and 4D pocket!',
+    palette: ['#0284c7', '#ef4444', '#facc15', '#ffffff', '#1e293b'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#090d16"/>
-      <!-- Magical Aura -->
-      <circle cx="200" cy="240" r="110" fill="#c026d3" opacity="0.25"/>
-      <!-- Cork Stopper -->
-      <polygon points="175,70 225,70 215,100 185,100" fill="#b45309" stroke="#78350f" stroke-width="4"/>
-      <!-- Neck Rim -->
-      <rect x="170" y="100" width="60" height="16" rx="4" fill="#e2e8f0" stroke="#64748b" stroke-width="4"/>
-      <!-- Flask Body -->
-      <path d="M185 116 L185 160 C130 180 100 230 100 270 C100 330 145 360 200 360 C255 360 300 330 300 270 C300 230 270 180 215 160 L215 116 Z" fill="#ffffff" fill-opacity="0.1" stroke="#e2e8f0" stroke-width="7"/>
-      <!-- Liquid inside -->
-      <path d="M115 260 Q160 280 200 260 T285 260 C290 320 250 350 200 350 C150 350 110 320 115 260 Z" fill="#d946ef"/>
-      <!-- Bubbles -->
-      <circle cx="170" cy="300" r="10" fill="#f472b6" opacity="0.8"/>
-      <circle cx="230" cy="285" r="14" fill="#f472b6" opacity="0.8"/>
-      <circle cx="205" cy="320" r="8" fill="#f472b6" opacity="0.8"/>
-      <circle cx="195" cy="230" r="6" fill="#fde047"/>
-      <!-- Sparkle Stars -->
-      <polygon points="150,190 153,197 160,200 153,203 150,210 147,203 140,200 147,197" fill="#facc15"/>
-      <polygon points="250,170 253,177 260,180 253,183 250,190 247,183 240,180 247,177" fill="#38bdf8"/>
+      <rect width="400" height="400" rx="30" fill="#f0f9ff"/>
+      <!-- Blue Body -->
+      <ellipse cx="200" cy="270" rx="80" ry="85" fill="#0284c7" stroke="#0369a1" stroke-width="6"/>
+      <!-- White Belly & Pocket -->
+      <circle cx="200" cy="285" r="55" fill="#ffffff" stroke="#0369a1" stroke-width="4"/>
+      <path d="M165 285 Q200 330 235 285 Z" fill="#ffffff" stroke="#0369a1" stroke-width="4"/>
+      <!-- Red Collar & Golden Bell -->
+      <rect x="135" y="200" width="130" height="16" rx="8" fill="#ef4444" stroke="#b91c1c" stroke-width="4"/>
+      <circle cx="200" cy="225" r="16" fill="#facc15" stroke="#b45309" stroke-width="3"/>
+      <line x1="184" y1="222" x2="216" y2="222" stroke="#b45309" stroke-width="2"/>
+      <circle cx="200" cy="228" r="3" fill="#1e293b"/>
+      <!-- Round Blue Head -->
+      <circle cx="200" cy="130" r="85" fill="#0284c7" stroke="#0369a1" stroke-width="6"/>
+      <!-- White Face Mask -->
+      <ellipse cx="200" cy="145" rx="68" ry="60" fill="#ffffff" stroke="#0369a1" stroke-width="4"/>
+      <!-- Eyes Connected on Top -->
+      <ellipse cx="182" cy="95" rx="16" ry="22" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+      <circle cx="186" cy="98" r="5" fill="#1e293b"/>
+      <ellipse cx="218" cy="95" rx="16" ry="22" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+      <circle cx="214" cy="98" r="5" fill="#1e293b"/>
+      <!-- Red Round Nose -->
+      <circle cx="200" cy="122" r="12" fill="#ef4444" stroke="#b91c1c" stroke-width="3"/>
+      <circle cx="196" cy="118" r="3" fill="#ffffff"/>
+      <!-- Nose line & Big Smile -->
+      <line x1="200" y1="134" x2="200" y2="175" stroke="#1e293b" stroke-width="4"/>
+      <path d="M150 160 Q200 205 250 160" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <!-- Whiskers (3 on each side) -->
+      <line x1="145" y1="140" x2="110" y2="135" stroke="#1e293b" stroke-width="3"/>
+      <line x1="140" y1="155" x2="105" y2="155" stroke="#1e293b" stroke-width="3"/>
+      <line x1="145" y1="170" x2="110" y2="175" stroke="#1e293b" stroke-width="3"/>
+      <line x1="255" y1="140" x2="290" y2="135" stroke="#1e293b" stroke-width="3"/>
+      <line x1="260" y1="155" x2="295" y2="155" stroke="#1e293b" stroke-width="3"/>
+      <line x1="255" y1="170" x2="290" y2="175" stroke="#1e293b" stroke-width="3"/>
     </svg>`,
   },
   {
     id: 'medium-4',
-    title: 'Cozy Fox in Scarf',
+    title: 'Shin-chan',
     difficulty: 'medium',
-    category: 'Animals',
-    hint: 'Orange fox head with fluffy white cheeks, pointy ears, and a warm wrapped red knit scarf!',
-    palette: ['#ea580c', '#ef4444', '#f8fafc', '#1e293b', '#fed7aa'],
+    category: 'Anime',
+    hint: 'Famous red t-shirt, yellow shorts, giant dark wavy eyebrows, and mischievous side-eye smile!',
+    palette: ['#ef4444', '#facc15', '#fed7aa', '#1e293b', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#f0fdf4"/>
-      <!-- Ears -->
-      <polygon points="120,170 110,80 180,130" fill="#ea580c" stroke="#1e293b" stroke-width="6"/>
-      <polygon points="130,150 125,95 170,130" fill="#1e293b"/>
-      <polygon points="280,170 290,80 220,130" fill="#ea580c" stroke="#1e293b" stroke-width="6"/>
-      <polygon points="270,150 275,95 230,130" fill="#1e293b"/>
-      <!-- Head Base -->
-      <path d="M120 160 C120 110 280 110 280 160 C290 210 260 260 200 270 C140 260 110 210 120 160 Z" fill="#ea580c" stroke="#1e293b" stroke-width="6"/>
-      <!-- White Cheeks & Muzzle -->
-      <path d="M120 190 C150 190 170 230 200 265 C230 230 250 190 280 190 C270 240 240 270 200 270 C160 270 130 240 120 190 Z" fill="#ffffff"/>
-      <!-- Eyes & Nose -->
-      <ellipse cx="160" cy="180" rx="7" ry="9" fill="#1e293b"/>
-      <ellipse cx="240" cy="180" rx="7" ry="9" fill="#1e293b"/>
-      <ellipse cx="200" cy="245" rx="10" ry="7" fill="#1e293b"/>
-      <!-- Red Knit Scarf -->
-      <rect x="130" y="270" width="140" height="40" rx="20" fill="#dc2626" stroke="#991b1b" stroke-width="6"/>
-      <line x1="160" y1="270" x2="160" y2="310" stroke="#fca5a5" stroke-width="4"/>
-      <line x1="190" y1="270" x2="190" y2="310" stroke="#fca5a5" stroke-width="4"/>
-      <line x1="220" y1="270" x2="220" y2="310" stroke="#fca5a5" stroke-width="4"/>
-      <rect x="210" y="300" width="35" height="60" rx="8" fill="#dc2626" stroke="#991b1b" stroke-width="5"/>
-      <line x1="222" y1="360" x2="222" y2="370" stroke="#fca5a5" stroke-width="4"/>
-      <line x1="232" y1="360" x2="232" y2="370" stroke="#fca5a5" stroke-width="4"/>
+      <rect width="400" height="400" rx="30" fill="#fef2f2"/>
+      <!-- Red Shirt & Yellow Shorts -->
+      <rect x="135" y="240" width="130" height="70" rx="10" fill="#ef4444" stroke="#b91c1c" stroke-width="5"/>
+      <rect x="145" y="300" width="110" height="40" rx="6" fill="#facc15" stroke="#ca8a04" stroke-width="4"/>
+      <!-- Chubby Head Silhouette -->
+      <path d="M120 180 C110 110 170 80 230 80 C290 80 300 130 280 180 C300 200 280 240 230 240 C170 240 120 220 120 180 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="5"/>
+      <!-- Shinchan Short Black Hair -->
+      <path d="M130 140 C140 85 240 85 270 120 C250 95 160 100 130 140 Z" fill="#1e293b"/>
+      <!-- Giant Iconic Thick Eyebrows -->
+      <path d="M140 115 Q175 95 195 115" fill="none" stroke="#1e293b" stroke-width="12" stroke-linecap="round"/>
+      <path d="M220 115 Q245 95 270 115" fill="none" stroke="#1e293b" stroke-width="12" stroke-linecap="round"/>
+      <!-- Big Eyes -->
+      <ellipse cx="170" cy="140" rx="14" ry="18" fill="#1e293b"/>
+      <circle cx="166" cy="135" r="5" fill="#ffffff"/>
+      <ellipse cx="245" cy="140" rx="14" ry="18" fill="#1e293b"/>
+      <circle cx="241" cy="135" r="5" fill="#ffffff"/>
+      <!-- Rosy Cheeks -->
+      <circle cx="135" cy="190" r="16" fill="#f43f5e" opacity="0.6"/>
+      <circle cx="275" cy="190" r="16" fill="#f43f5e" opacity="0.6"/>
+      <!-- Goofy Cheeky Smile -->
+      <path d="M185 180 Q215 210 240 175" fill="none" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'medium-5',
-    title: 'Game Boy Classic',
+    title: 'SpongeBob SquarePants',
     difficulty: 'medium',
-    category: 'Gaming',
-    hint: 'Retro handheld console with greenish dot-matrix screen, D-pad, slanted buttons, and speaker slits!',
-    palette: ['#94a3b8', '#84cc16', '#65a30d', '#dc2626', '#1e293b'],
+    category: 'Cartoon',
+    hint: 'Yellow porous sea sponge with buck teeth, blue eyes, white collar with red tie, and brown square pants!',
+    palette: ['#facc15', '#78350f', '#38bdf8', '#ef4444', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#f1f5f9"/>
-      <!-- Shell Body -->
-      <path d="M100 60 L300 60 L300 320 Q300 340 275 340 L125 340 Q100 340 100 320 Z" fill="#cbd5e1" stroke="#475569" stroke-width="7"/>
-      <!-- Screen Bezel -->
-      <path d="M120 85 L280 85 L280 200 Q280 210 270 210 L130 210 Q120 210 120 200 Z" fill="#64748b" stroke="#334155" stroke-width="4"/>
-      <!-- Power LED -->
-      <circle cx="135" cy="140" r="4" fill="#ef4444"/>
-      <!-- Green LCD Screen -->
-      <rect x="150" y="100" width="105" height="90" rx="4" fill="#84cc16" stroke="#4d7c0f" stroke-width="4"/>
-      <!-- Pixel Heart on Screen -->
-      <path d="M190 140 L202 128 L215 140 L202 154 Z" fill="#3f6212"/>
-      <!-- D-Pad -->
-      <rect x="130" y="240" width="45" height="15" rx="3" fill="#1e293b"/>
-      <rect x="145" y="225" width="15" height="45" rx="3" fill="#1e293b"/>
-      <!-- A & B Buttons (Slanted) -->
-      <circle cx="265" cy="240" r="11" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
-      <circle cx="240" cy="255" r="11" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
-      <!-- Select & Start -->
-      <rect x="175" y="300" width="18" height="6" rx="2" fill="#64748b" transform="rotate(-25 184 303)"/>
-      <rect x="205" y="300" width="18" height="6" rx="2" fill="#64748b" transform="rotate(-25 214 303)"/>
-      <!-- Speaker Slits -->
-      <line x1="260" y1="315" x2="280" y2="295" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
-      <line x1="268" y1="320" x2="288" y2="300" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#f0fdf4"/>
+      <!-- Sponge Body -->
+      <rect x="110" y="80" width="180" height="170" rx="15" fill="#facc15" stroke="#ca8a04" stroke-width="6"/>
+      <!-- Sponge Pores / Holes -->
+      <circle cx="130" cy="110" r="8" fill="#ca8a04" opacity="0.4"/>
+      <circle cx="270" cy="100" r="10" fill="#ca8a04" opacity="0.4"/>
+      <circle cx="130" cy="220" r="12" fill="#ca8a04" opacity="0.4"/>
+      <circle cx="265" cy="215" r="8" fill="#ca8a04" opacity="0.4"/>
+      <!-- White Shirt & Red Tie -->
+      <rect x="110" y="250" width="180" height="35" fill="#ffffff" stroke="#1e293b" stroke-width="5"/>
+      <polygon points="190,250 210,250 200,285" fill="#ef4444"/>
+      <!-- Brown Square Pants -->
+      <rect x="110" y="285" width="180" height="45" fill="#78350f" stroke="#451a03" stroke-width="5"/>
+      <!-- Big Blue Eyes -->
+      <circle cx="170" cy="140" r="28" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+      <circle cx="170" cy="140" r="14" fill="#38bdf8"/>
+      <circle cx="170" cy="140" r="7" fill="#1e293b"/>
+      <circle cx="230" cy="140" r="28" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+      <circle cx="230" cy="140" r="14" fill="#38bdf8"/>
+      <circle cx="230" cy="140" r="7" fill="#1e293b"/>
+      <!-- Long Nose -->
+      <path d="M195 155 C190 135 210 135 205 155 Z" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+      <!-- Giant Buck-Tooth Smile -->
+      <path d="M140 180 Q200 230 260 180" fill="none" stroke="#1e293b" stroke-width="5"/>
+      <rect x="185" y="195" width="12" height="15" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+      <rect x="203" y="195" width="12" height="15" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
     </svg>`,
   },
   {
     id: 'medium-6',
-    title: 'Sakura Bonsai Tree',
+    title: 'Mickey Mouse',
     difficulty: 'medium',
-    category: 'Nature',
-    hint: 'Ceramic pot, gnarled twisty brown trunk, and clusters of blooming pink cherry blossoms!',
-    palette: ['#f472b6', '#ec4899', '#78350f', '#0284c7', '#fdf2f8'],
+    category: 'Cartoon',
+    hint: 'Classic round black mouse ears, white face mask, black nose, and red shorts with two white buttons!',
+    palette: ['#1e293b', '#ef4444', '#fed7aa', '#facc15', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#fdf2f8"/>
-      <!-- Bonsai Pot -->
-      <polygon points="120,310 280,310 265,355 135,355" fill="#0284c7" stroke="#0369a1" stroke-width="6"/>
-      <rect x="145" y="355" width="20" height="12" rx="3" fill="#0369a1"/>
-      <rect x="235" y="355" width="20" height="12" rx="3" fill="#0369a1"/>
-      <!-- Trunk & Branches -->
-      <path d="M200 310 C190 270 160 250 180 210 C195 180 150 160 140 130" fill="none" stroke="#78350f" stroke-width="22" stroke-linecap="round"/>
-      <path d="M180 210 C220 190 260 170 270 140" fill="none" stroke="#78350f" stroke-width="14" stroke-linecap="round"/>
-      <path d="M190 170 C200 140 210 120 200 90" fill="none" stroke="#78350f" stroke-width="10" stroke-linecap="round"/>
-      <!-- Sakura Blossom Clouds -->
-      <circle cx="130" cy="120" r="40" fill="#f472b6"/>
-      <circle cx="160" cy="100" r="35" fill="#fbcfe8"/>
-      <circle cx="200" cy="80" r="42" fill="#ec4899"/>
-      <circle cx="240" cy="95" r="36" fill="#f472b6"/>
-      <circle cx="275" cy="130" r="42" fill="#fbcfe8"/>
-      <circle cx="250" cy="150" r="30" fill="#ec4899"/>
-      <!-- Falling Petals -->
-      <ellipse cx="120" cy="220" rx="8" ry="4" fill="#f472b6" transform="rotate(30 120 220)"/>
-      <ellipse cx="260" cy="250" rx="7" ry="4" fill="#ec4899" transform="rotate(-20 260 250)"/>
-      <ellipse cx="220" cy="280" rx="8" ry="4" fill="#fbcfe8" transform="rotate(45 220 280)"/>
+      <rect width="400" height="400" rx="30" fill="#fef2f2"/>
+      <!-- Iconic Round Black Ears -->
+      <circle cx="110" cy="100" r="55" fill="#1e293b"/>
+      <circle cx="290" cy="100" r="55" fill="#1e293b"/>
+      <!-- Head Base -->
+      <circle cx="200" cy="180" r="85" fill="#1e293b"/>
+      <!-- Cream Face Mask -->
+      <path d="M150 160 C130 220 270 220 250 160 C260 130 220 130 200 150 C180 130 140 130 150 160 Z" fill="#fed7aa"/>
+      <ellipse cx="200" cy="210" rx="55" ry="35" fill="#fed7aa"/>
+      <!-- Eyes -->
+      <ellipse cx="180" cy="165" rx="8" ry="18" fill="#1e293b"/>
+      <circle cx="178" cy="160" r="3" fill="#ffffff"/>
+      <ellipse cx="220" cy="165" rx="8" ry="18" fill="#1e293b"/>
+      <circle cx="218" cy="160" r="3" fill="#ffffff"/>
+      <!-- Black Nose -->
+      <ellipse cx="200" cy="195" rx="16" ry="10" fill="#1e293b"/>
+      <!-- Wide Smile -->
+      <path d="M165 210 Q200 245 235 210" fill="none" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+      <!-- Red Shorts Body with 2 White Buttons -->
+      <path d="M140 280 C140 250 260 250 260 280 L275 360 L125 360 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="5"/>
+      <ellipse cx="175" cy="315" rx="8" ry="14" fill="#ffffff"/>
+      <ellipse cx="225" cy="315" rx="8" ry="14" fill="#ffffff"/>
     </svg>`,
   },
   {
     id: 'medium-7',
-    title: 'Lighthouse at Dusk',
+    title: 'Motu with Samosa',
     difficulty: 'medium',
-    category: 'Nature',
-    hint: 'Rocky cliff, red & white striped lighthouse tower, golden beacon light beam, and evening stars!',
-    palette: ['#dc2626', '#f8fafc', '#facc15', '#1e1b4b', '#0f172a'],
+    category: 'Cartoon',
+    hint: 'Chubby Motu in red vest, bald head with side hair, moustache, holding a hot crispy golden samosa!',
+    palette: ['#ef4444', '#f59e0b', '#fed7aa', '#1e293b', '#78350f'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#1e1b4b"/>
-      <!-- Sunset gradient horizon -->
-      <path d="M0 250 Q200 220 400 250 L400 400 L0 400 Z" fill="#312e81"/>
-      <path d="M0 320 C100 310 250 330 400 315 L400 400 L0 400 Z" fill="#0f172a"/>
-      <!-- Light Beam -->
-      <polygon points="190,120 0,40 0,180" fill="#facc15" opacity="0.3"/>
-      <polygon points="210,120 400,60 400,200" fill="#facc15" opacity="0.35"/>
-      <!-- Cliff Base -->
-      <polygon points="120,330 280,330 310,400 90,400" fill="#334155"/>
-      <!-- Lighthouse Tower -->
-      <polygon points="175,130 225,130 240,330 160,330" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
-      <!-- Red Stripes -->
-      <polygon points="170,170 230,170 234,220 166,220" fill="#dc2626"/>
-      <polygon points="163,260 237,260 240,305 160,305" fill="#dc2626"/>
-      <!-- Beacon Room & Roof -->
-      <rect x="175" y="105" width="50" height="25" fill="#facc15" stroke="#0f172a" stroke-width="4"/>
-      <polygon points="165,105 235,105 200,70" fill="#dc2626" stroke="#0f172a" stroke-width="4"/>
-      <circle cx="200" cy="65" r="5" fill="#facc15"/>
+      <rect width="400" height="400" rx="30" fill="#fffbeb"/>
+      <!-- Red Vest & Round Tummy -->
+      <ellipse cx="200" cy="285" rx="85" ry="75" fill="#ef4444" stroke="#b91c1c" stroke-width="6"/>
+      <path d="M175 220 L175 350 L225 350 L225 220 Z" fill="#fed7aa"/>
+      <!-- Crispy Golden Samosa in Hand -->
+      <polygon points="280,240 330,240 305,200" fill="#f59e0b" stroke="#b45309" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="275" cy="245" r="14" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+      <!-- Round Head & Mustache -->
+      <circle cx="200" cy="140" r="65" fill="#fed7aa" stroke="#ea580c" stroke-width="6"/>
+      <!-- Bald Head with Tiny Tuft -->
+      <path d="M195 75 Q205 55 200 50" stroke="#1e293b" stroke-width="5" fill="none"/>
+      <!-- Big Eyes -->
+      <circle cx="175" cy="125" r="12" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+      <circle cx="178" cy="125" r="5" fill="#1e293b"/>
+      <circle cx="225" cy="125" r="12" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+      <circle cx="222" cy="125" r="5" fill="#1e293b"/>
+      <!-- Round Nose -->
+      <circle cx="200" cy="140" r="10" fill="#ea580c"/>
+      <!-- Iconic Curled Black Mustache -->
+      <path d="M150 160 Q180 150 200 160 Q220 150 250 160 C240 175 220 170 200 165 C180 170 160 175 150 160 Z" fill="#1e293b"/>
+      <!-- Happy Open Mouth for Samosa -->
+      <path d="M185 175 Q200 200 215 175 Z" fill="#dc2626"/>
     </svg>`,
   },
   {
     id: 'medium-8',
-    title: 'Whimsical Cupcake',
+    title: 'Yellow Minion',
     difficulty: 'medium',
-    category: 'Food',
-    hint: 'Pleated pastel wrapper, giant swirling strawberry frosting cloud, sprinkles, and a glossy cherry!',
-    palette: ['#ec4899', '#f43f5e', '#a855f7', '#fde047', '#38bdf8'],
+    category: 'Cartoon',
+    hint: 'Capsule-shaped yellow body, silver goggles with round eye, blue denim overalls, and big happy grin!',
+    palette: ['#facc15', '#2563eb', '#64748b', '#1e293b', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#fdf4ff"/>
-      <!-- Cupcake Liner / Wrapper -->
-      <polygon points="120,240 280,240 255,360 145,360" fill="#c084fc" stroke="#7e22ce" stroke-width="6"/>
-      <line x1="150" y1="240" x2="165" y2="360" stroke="#7e22ce" stroke-width="4"/>
-      <line x1="185" y1="240" x2="192" y2="360" stroke="#7e22ce" stroke-width="4"/>
-      <line x1="215" y1="240" x2="208" y2="360" stroke="#7e22ce" stroke-width="4"/>
-      <line x1="250" y1="240" x2="235" y2="360" stroke="#7e22ce" stroke-width="4"/>
-      <!-- Frosting Swirl (Bottom Layer) -->
-      <ellipse cx="200" cy="235" rx="95" ry="30" fill="#f472b6" stroke="#db2777" stroke-width="5"/>
-      <!-- Frosting Swirl (Middle Layer) -->
-      <ellipse cx="200" cy="195" rx="75" ry="25" fill="#f9a8d4" stroke="#db2777" stroke-width="5"/>
-      <!-- Frosting Swirl (Top Peak) -->
-      <ellipse cx="200" cy="155" rx="50" ry="20" fill="#fdf2f8" stroke="#db2777" stroke-width="5"/>
-      <!-- Colorful Sprinkles -->
-      <line x1="150" y1="220" x2="162" y2="228" stroke="#facc15" stroke-width="5" stroke-linecap="round"/>
-      <line x1="230" y1="225" x2="245" y2="220" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
-      <line x1="180" y1="185" x2="190" y2="195" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/>
-      <line x1="220" y1="180" x2="230" y2="175" stroke="#facc15" stroke-width="5" stroke-linecap="round"/>
-      <!-- Cherry on Top -->
-      <circle cx="200" cy="115" r="22" fill="#e11d48" stroke="#9f1239" stroke-width="4"/>
-      <path d="M200 95 Q230 65 240 50" fill="none" stroke="#15803d" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="192" cy="108" r="4" fill="#ffffff"/>
+      <rect width="400" height="400" rx="30" fill="#eff6ff"/>
+      <!-- Yellow Capsule Body -->
+      <path d="M120 160 C120 80 280 80 280 160 L280 280 C280 340 120 340 120 280 Z" fill="#facc15" stroke="#ca8a04" stroke-width="6"/>
+      <!-- Hair Strands -->
+      <line x1="200" y1="80" x2="200" y2="55" stroke="#1e293b" stroke-width="4"/>
+      <line x1="185" y1="85" x2="175" y2="60" stroke="#1e293b" stroke-width="4"/>
+      <line x1="215" y1="85" x2="225" y2="60" stroke="#1e293b" stroke-width="4"/>
+      <!-- Goggle Black Strap -->
+      <rect x="120" y="140" width="160" height="16" fill="#1e293b"/>
+      <!-- Big Silver Goggle Lens -->
+      <circle cx="200" cy="148" r="40" fill="#94a3b8" stroke="#475569" stroke-width="6"/>
+      <circle cx="200" cy="148" r="30" fill="#ffffff"/>
+      <circle cx="200" cy="148" r="14" fill="#78350f"/>
+      <circle cx="200" cy="148" r="7" fill="#1e293b"/>
+      <circle cx="195" cy="142" r="3" fill="#ffffff"/>
+      <!-- Big Minion Grin -->
+      <path d="M165 205 Q200 235 235 205" fill="none" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+      <!-- Blue Overalls -->
+      <path d="M120 270 L280 270 L280 340 L120 340 Z" fill="#2563eb" stroke="#1d4ed8" stroke-width="5"/>
+      <rect x="155" y="240" width="90" height="40" fill="#2563eb" stroke="#1d4ed8" stroke-width="4"/>
+      <!-- Gru Logo on Pocket -->
+      <circle cx="200" cy="275" r="12" fill="#1e293b"/>
+      <polygon points="196,270 204,275 196,280" fill="#facc15"/>
     </svg>`,
   },
   {
     id: 'medium-9',
-    title: 'Chameleon on Branch',
+    title: 'Jerry the Mouse',
     difficulty: 'medium',
-    category: 'Animals',
-    hint: 'Curled tail chameleon perched on a green branch, big turret eyes, and rainbow scales!',
-    palette: ['#10b981', '#06b6d4', '#facc15', '#78350f', '#1e293b'],
+    category: 'Cartoon',
+    hint: 'Brown clever little mouse with giant pink-lined round ears, holding a tasty yellow Swiss cheese triangle!',
+    palette: ['#92400e', '#fbcfe8', '#facc15', '#1e293b', '#fef3c7'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#ecfdf5"/>
-      <!-- Tree Branch -->
-      <path d="M40 270 Q180 250 360 270" fill="none" stroke="#78350f" stroke-width="24" stroke-linecap="round"/>
-      <!-- Chameleon Body & Curled Tail -->
-      <path d="M120 250 C70 250 50 180 90 160 C120 145 130 200 110 210 C95 215 90 200 100 190" fill="none" stroke="#10b981" stroke-width="16" stroke-linecap="round"/>
-      <path d="M120 250 C130 170 230 160 270 200 C290 220 280 250 250 255 Z" fill="#10b981" stroke="#047857" stroke-width="6"/>
-      <!-- Color Crest Back Ridges -->
-      <polygon points="160,180 170,165 180,180" fill="#06b6d4"/>
-      <polygon points="185,175 195,160 205,175" fill="#facc15"/>
-      <polygon points="210,175 220,160 230,175" fill="#f43f5e"/>
-      <!-- Big Swiveling Eye -->
-      <circle cx="245" cy="195" r="22" fill="#34d399" stroke="#047857" stroke-width="4"/>
-      <circle cx="245" cy="195" r="10" fill="#1e293b"/>
-      <circle cx="242" cy="192" r="3" fill="#ffffff"/>
-      <!-- Tiny Feet Clasping Branch -->
-      <ellipse cx="170" cy="255" rx="8" ry="12" fill="#059669"/>
-      <ellipse cx="230" cy="255" rx="8" ry="12" fill="#059669"/>
+      <rect width="400" height="400" rx="30" fill="#fffbeb"/>
+      <!-- Big Round Ears with Pink Inside -->
+      <circle cx="120" cy="110" r="48" fill="#92400e" stroke="#78350f" stroke-width="5"/>
+      <circle cx="120" cy="110" r="30" fill="#fbcfe8"/>
+      <circle cx="280" cy="110" r="48" fill="#92400e" stroke="#78350f" stroke-width="5"/>
+      <circle cx="280" cy="110" r="30" fill="#fbcfe8"/>
+      <!-- Head & Cheeks -->
+      <circle cx="200" cy="180" r="65" fill="#92400e" stroke="#78350f" stroke-width="5"/>
+      <ellipse cx="200" cy="205" rx="45" ry="30" fill="#fed7aa"/>
+      <!-- Big Eyes -->
+      <ellipse cx="180" cy="155" rx="10" ry="18" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+      <circle cx="182" cy="158" r="6" fill="#1e293b"/>
+      <ellipse cx="220" cy="155" rx="10" ry="18" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+      <circle cx="218" cy="158" r="6" fill="#1e293b"/>
+      <!-- Tiny Black Nose -->
+      <ellipse cx="200" cy="190" rx="8" ry="5" fill="#1e293b"/>
+      <!-- Clever Smile -->
+      <path d="M185 205 Q200 220 215 205" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <!-- Whiskers -->
+      <line x1="150" y1="200" x2="110" y2="195" stroke="#1e293b" stroke-width="3"/>
+      <line x1="250" y1="200" x2="290" y2="195" stroke="#1e293b" stroke-width="3"/>
+      <!-- Swiss Cheese Slice in Hands -->
+      <polygon points="150,320 250,320 200,260" fill="#facc15" stroke="#d97706" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="185" cy="300" r="8" fill="#d97706" opacity="0.5"/>
+      <circle cx="215" cy="295" r="6" fill="#d97706" opacity="0.5"/>
     </svg>`,
   },
   {
     id: 'medium-10',
-    title: 'Alien Flying Saucer',
+    title: 'Tom the Cat',
     difficulty: 'medium',
-    category: 'Sci-Fi',
-    hint: 'Metallic flying saucer, transparent dome with a green alien waving, and a glowing tractor beam!',
-    palette: ['#a855f7', '#22c55e', '#38bdf8', '#facc15', '#0f172a'],
+    category: 'Cartoon',
+    hint: 'Gray & white cartoon cat with sharp pointy ears, big yellow eyes, red mouth, and long whiskers!',
+    palette: ['#64748b', '#facc15', '#ef4444', '#ffffff', '#1e293b'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#0b0f19"/>
-      <!-- Stars -->
-      <circle cx="80" cy="60" r="3" fill="#facc15"/>
-      <circle cx="320" cy="80" r="2" fill="#ffffff"/>
-      <circle cx="350" cy="300" r="3" fill="#38bdf8"/>
-      <!-- Tractor Abduction Beam -->
-      <polygon points="170,220 230,220 310,380 90,380" fill="#38bdf8" opacity="0.25"/>
-      <ellipse cx="200" cy="380" rx="110" ry="15" fill="#38bdf8" opacity="0.35"/>
-      <!-- Glass Cockpit Dome -->
-      <ellipse cx="200" cy="165" rx="65" ry="60" fill="#38bdf8" opacity="0.5" stroke="#93c5fd" stroke-width="4"/>
-      <!-- Cute Green Alien -->
-      <ellipse cx="200" cy="165" rx="26" ry="30" fill="#22c55e"/>
-      <circle cx="190" cy="155" r="6" fill="#0f172a"/>
-      <circle cx="210" cy="155" r="6" fill="#0f172a"/>
-      <line x1="200" y1="135" x2="200" y2="115" stroke="#22c55e" stroke-width="4"/>
-      <circle cx="200" cy="112" r="5" fill="#facc15"/>
-      <!-- Metallic Saucer Disk -->
-      <ellipse cx="200" cy="205" rx="130" ry="32" fill="#a855f7" stroke="#6b21a8" stroke-width="6"/>
-      <ellipse cx="200" cy="215" rx="100" ry="20" fill="#7e22ce"/>
-      <!-- Flashing Saucer Lights -->
-      <circle cx="100" cy="208" r="7" fill="#facc15"/>
-      <circle cx="140" cy="215" r="7" fill="#22c55e"/>
-      <circle cx="200" cy="220" r="7" fill="#facc15"/>
-      <circle cx="260" cy="215" r="7" fill="#22c55e"/>
-      <circle cx="300" cy="208" r="7" fill="#facc15"/>
+      <rect width="400" height="400" rx="30" fill="#f1f5f9"/>
+      <!-- Pointy Gray Ears -->
+      <polygon points="120,130 90,40 170,90" fill="#64748b" stroke="#334155" stroke-width="6"/>
+      <polygon points="120,115 105,60 155,90" fill="#fbcfe8"/>
+      <polygon points="280,130 310,40 230,90" fill="#64748b" stroke="#334155" stroke-width="6"/>
+      <polygon points="280,115 295,60 245,90" fill="#fbcfe8"/>
+      <!-- Gray Cat Head -->
+      <ellipse cx="200" cy="180" rx="85" ry="75" fill="#64748b" stroke="#334155" stroke-width="6"/>
+      <!-- White Muzzle -->
+      <ellipse cx="200" cy="210" rx="60" ry="38" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+      <!-- Big Yellow Eyes -->
+      <ellipse cx="170" cy="140" rx="18" ry="26" fill="#facc15" stroke="#334155" stroke-width="4"/>
+      <ellipse cx="172" cy="140" rx="6" ry="18" fill="#1e293b"/>
+      <ellipse cx="230" cy="140" rx="18" ry="26" fill="#facc15" stroke="#334155" stroke-width="4"/>
+      <ellipse cx="228" cy="140" rx="6" ry="18" fill="#1e293b"/>
+      <!-- Pink Nose -->
+      <polygon points="190,185 210,185 200,200" fill="#f43f5e"/>
+      <!-- Shocked / Scheming Cat Smile -->
+      <path d="M165 215 Q200 245 235 215" fill="#ef4444" stroke="#334155" stroke-width="4"/>
+      <!-- Whiskers -->
+      <line x1="135" y1="205" x2="70" y2="195" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <line x1="135" y1="220" x2="65" y2="225" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <line x1="265" y1="205" x2="330" y2="195" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <line x1="265" y1="220" x2="335" y2="225" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
     </svg>`,
   },
 
-  // ================= HARD (10 DRAWINGS) =================
+  // ================= HARD (10 EPIC CARTOON SCENES & HEROES) =================
   {
     id: 'hard-1',
-    title: 'Cyberpunk Ramen Shop',
+    title: 'Bheem at Dholakpur Palace',
     difficulty: 'hard',
-    category: 'Sci-Fi',
-    hint: 'Neon-lit nighttime noodle stall with glowing signs, steaming bowl, lanterns, and rain reflections!',
-    palette: ['#06b6d4', '#f43f5e', '#eab308', '#8b5cf6', '#090d16'],
+    category: 'Cartoon',
+    hint: 'Bheem holding a giant mountain of golden laddoos in front of the royal golden Dholakpur fort!',
+    palette: ['#f59e0b', '#ea580c', '#facc15', '#dc2626', '#0284c7'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#090d16"/>
-      <!-- Background Cyber Grid -->
-      <line x1="0" y1="320" x2="400" y2="320" stroke="#06b6d4" stroke-width="3" opacity="0.6"/>
-      <line x1="0" y1="360" x2="400" y2="360" stroke="#06b6d4" stroke-width="2" opacity="0.4"/>
-      <!-- Shop Roof Awning -->
-      <polygon points="60,110 340,110 360,150 40,150" fill="#f43f5e" stroke="#06b6d4" stroke-width="4"/>
-      <line x1="100" y1="110" x2="90" y2="150" stroke="#881337" stroke-width="3"/>
-      <line x1="200" y1="110" x2="200" y2="150" stroke="#881337" stroke-width="3"/>
-      <line x1="300" y1="110" x2="310" y2="150" stroke="#881337" stroke-width="3"/>
-      <!-- Neon Sign Box -->
-      <rect x="130" y="45" width="140" height="50" rx="8" fill="#1e1b4b" stroke="#06b6d4" stroke-width="4"/>
-      <text x="200" y="80" fill="#f43f5e" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="24" text-anchor="middle" letter-spacing="2">RAMEN 🍜</text>
-      <!-- Counter & Stools -->
-      <rect x="70" y="240" width="260" height="80" rx="6" fill="#1e293b" stroke="#334155" stroke-width="4"/>
-      <rect x="100" y="290" width="40" height="30" rx="4" fill="#06b6d4"/>
-      <rect x="260" y="290" width="40" height="30" rx="4" fill="#06b6d4"/>
-      <!-- Giant Steaming Ramen Bowl -->
-      <path d="M140 220 C140 270 260 270 260 220 Z" fill="#f43f5e" stroke="#fbbf24" stroke-width="5"/>
-      <ellipse cx="200" cy="220" rx="60" ry="15" fill="#fef08a"/>
-      <!-- Chopsticks & Egg -->
-      <line x1="170" y1="170" x2="245" y2="215" stroke="#e2e8f0" stroke-width="6" stroke-linecap="round"/>
-      <circle cx="180" cy="220" r="10" fill="#ffffff"/>
-      <circle cx="180" cy="220" r="6" fill="#f97316"/>
-      <!-- Steam Wisps -->
-      <path d="M185 195 Q175 165 190 145" fill="none" stroke="#06b6d4" stroke-width="4" stroke-linecap="round"/>
-      <path d="M215 195 Q225 165 210 145" fill="none" stroke="#06b6d4" stroke-width="4" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#0284c7"/>
+      <!-- Dholakpur Palace Walls & Domes -->
+      <rect x="40" y="160" width="320" height="200" fill="#f59e0b" stroke="#b45309" stroke-width="5"/>
+      <path d="M70 160 C70 90 130 90 130 160 Z" fill="#dc2626" stroke="#991b1b" stroke-width="4"/>
+      <path d="M270 160 C270 90 330 90 330 160 Z" fill="#dc2626" stroke="#991b1b" stroke-width="4"/>
+      <path d="M160 160 C160 70 240 70 240 160 Z" fill="#fbbf24" stroke="#d97706" stroke-width="5"/>
+      <!-- Palace Flags -->
+      <polygon points="200,60 230,70 200,80" fill="#ea580c"/>
+      <!-- Giant Plate of Laddoos -->
+      <ellipse cx="200" cy="240" rx="90" ry="25" fill="#e2e8f0" stroke="#64748b" stroke-width="4"/>
+      <circle cx="160" cy="230" r="16" fill="#facc15" stroke="#d97706" stroke-width="3"/>
+      <circle cx="200" cy="225" r="18" fill="#facc15" stroke="#d97706" stroke-width="3"/>
+      <circle cx="240" cy="230" r="16" fill="#facc15" stroke="#d97706" stroke-width="3"/>
+      <circle cx="180" cy="200" r="16" fill="#facc15" stroke="#d97706" stroke-width="3"/>
+      <circle cx="220" cy="200" r="16" fill="#facc15" stroke="#d97706" stroke-width="3"/>
+      <circle cx="200" cy="175" r="18" fill="#facc15" stroke="#d97706" stroke-width="3"/>
+      <!-- Chhota Bheem Silhouette with Dhoti & Tilak -->
+      <circle cx="200" cy="310" r="30" fill="#fed7aa" stroke="#ea580c" stroke-width="4"/>
+      <polygon points="175,340 225,340 235,400 165,400" fill="#ea580c"/>
+      <line x1="200" y1="290" x2="200" y2="305" stroke="#dc2626" stroke-width="4"/>
     </svg>`,
   },
   {
     id: 'hard-2',
-    title: 'Steampunk Owl',
+    title: 'Oggy vs Cockroaches Chase',
     difficulty: 'hard',
-    category: 'Objects',
-    hint: 'Brass mechanical owl with rotating cog eyes, riveted wing plates, and steam pipe feathers!',
-    palette: ['#d97706', '#b45309', '#eab308', '#78350f', '#0f172a'],
+    category: 'Cartoon',
+    hint: 'Oggy swinging his giant pink flyswatter chasing the mischievous cockroach Joey in the kitchen!',
+    palette: ['#38bdf8', '#ec4899', '#f43f5e', '#78350f', '#0f172a'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#1c1917"/>
-      <!-- Perch Pipe -->
-      <rect x="40" y="320" width="320" height="24" rx="6" fill="#78350f" stroke="#451a03" stroke-width="4"/>
-      <!-- Riveted Wings -->
-      <path d="M80 180 C60 240 80 300 120 310 L140 200 Z" fill="#b45309" stroke="#78350f" stroke-width="5"/>
-      <path d="M320 180 C340 240 320 300 280 310 L260 200 Z" fill="#b45309" stroke="#78350f" stroke-width="5"/>
-      <!-- Main Brass Body -->
-      <ellipse cx="200" cy="240" rx="75" ry="90" fill="#d97706" stroke="#78350f" stroke-width="6"/>
-      <!-- Chest Pressure Gauge -->
-      <circle cx="200" cy="260" r="22" fill="#fef3c7" stroke="#451a03" stroke-width="4"/>
-      <line x1="200" y1="260" x2="212" y2="250" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
-      <!-- Head -->
-      <ellipse cx="200" cy="145" rx="70" ry="55" fill="#f59e0b" stroke="#78350f" stroke-width="6"/>
-      <!-- Gear Eyes -->
-      <circle cx="160" cy="140" r="30" fill="#451a03" stroke="#eab308" stroke-width="6"/>
-      <circle cx="160" cy="140" r="16" fill="#38bdf8"/>
-      <circle cx="160" cy="140" r="8" fill="#0f172a"/>
-      <circle cx="240" cy="140" r="30" fill="#451a03" stroke="#eab308" stroke-width="6"/>
-      <circle cx="240" cy="140" r="16" fill="#38bdf8"/>
-      <circle cx="240" cy="140" r="8" fill="#0f172a"/>
-      <!-- Copper Beak -->
-      <polygon points="190,150 210,150 200,180" fill="#78350f"/>
-      <!-- Ear Tuft Horns -->
-      <polygon points="135,105 150,70 170,105" fill="#b45309"/>
-      <polygon points="265,105 250,70 230,105" fill="#b45309"/>
+      <rect width="400" height="400" rx="30" fill="#fef2f2"/>
+      <!-- Kitchen Tiled Floor -->
+      <line x1="0" y1="320" x2="400" y2="320" stroke="#cbd5e1" stroke-width="6"/>
+      <line x1="80" y1="320" x2="60" y2="400" stroke="#cbd5e1" stroke-width="4"/>
+      <line x1="200" y1="320" x2="190" y2="400" stroke="#cbd5e1" stroke-width="4"/>
+      <line x1="320" y1="320" x2="330" y2="400" stroke="#cbd5e1" stroke-width="4"/>
+      <!-- Giant Pink Flyswatter in Air -->
+      <line x1="120" y1="180" x2="70" y2="90" stroke="#78350f" stroke-width="10" stroke-linecap="round"/>
+      <rect x="30" y="40" width="70" height="70" rx="8" fill="#ec4899" stroke="#be185d" stroke-width="5" transform="rotate(-15 65 75)"/>
+      <!-- Oggy Running Pose -->
+      <ellipse cx="160" cy="240" rx="65" ry="50" fill="#38bdf8" stroke="#0284c7" stroke-width="5"/>
+      <circle cx="160" cy="180" r="40" fill="#38bdf8" stroke="#0284c7" stroke-width="5"/>
+      <circle cx="145" cy="180" r="16" fill="#ef4444"/>
+      <!-- Cockroach Joey Running for his life! -->
+      <ellipse cx="320" cy="290" rx="26" ry="16" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+      <circle cx="340" cy="285" r="12" fill="#dc2626"/>
+      <!-- Cockroach Antennae -->
+      <path d="M345 275 Q360 250 350 230" fill="none" stroke="#451a03" stroke-width="3"/>
+      <path d="M345 280 Q370 260 375 240" fill="none" stroke="#451a03" stroke-width="3"/>
+      <!-- Motion Speed Lines -->
+      <line x1="260" y1="300" x2="290" y2="300" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+      <line x1="250" y1="310" x2="280" y2="310" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'hard-3',
-    title: "Wizard's Library",
+    title: 'Doraemon & Nobita Sky Flight',
     difficulty: 'hard',
-    category: 'Magic',
-    hint: 'Enchanted wooden bookshelf loaded with magical glowing spell books, floating crystal orb, and candles!',
-    palette: ['#8b5cf6', '#eab308', '#9333ea', '#78350f', '#0f172a'],
+    category: 'Anime',
+    hint: 'Doraemon and Nobita flying with bamboo copters above fluffy white clouds and golden sunset sun!',
+    palette: ['#38bdf8', '#facc15', '#f43f5e', '#0284c7', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#0f172a"/>
-      <!-- Wooden Bookcase Frame -->
-      <rect x="60" y="50" width="280" height="300" rx="10" fill="#451a03" stroke="#78350f" stroke-width="8"/>
-      <line x1="60" y1="160" x2="340" y2="160" stroke="#78350f" stroke-width="8"/>
-      <line x1="60" y1="260" x2="340" y2="260" stroke="#78350f" stroke-width="8"/>
-      <!-- Top Shelf Books -->
-      <rect x="80" y="80" width="22" height="80" rx="3" fill="#dc2626"/>
-      <rect x="105" y="90" width="26" height="70" rx="3" fill="#8b5cf6"/>
-      <rect x="135" y="70" width="30" height="90" rx="3" fill="#eab308"/>
-      <rect x="170" y="85" width="24" height="75" rx="3" fill="#22c55e"/>
-      <!-- Floating Crystal Orb -->
-      <circle cx="260" cy="110" r="30" fill="#c084fc" opacity="0.8"/>
-      <circle cx="260" cy="110" r="22" fill="#38bdf8"/>
-      <circle cx="255" cy="102" r="6" fill="#ffffff"/>
-      <!-- Middle Shelf Ancient Tomes -->
-      <rect x="80" y="180" width="35" height="80" rx="4" fill="#9333ea"/>
-      <rect x="120" y="195" width="28" height="65" rx="3" fill="#3b82f6"/>
-      <polygon points="175,260 210,210 230,220 195,260" fill="#d97706"/>
-      <!-- Magic Potion & Candle -->
-      <circle cx="280" cy="235" r="18" fill="#10b981"/>
-      <rect x="274" y="205" width="12" height="15" fill="#f1f5f9"/>
-      <ellipse cx="280" cy="200" rx="4" ry="7" fill="#facc15"/>
-      <!-- Bottom Shelf Pile -->
-      <rect x="90" y="300" width="120" height="24" rx="3" fill="#b45309"/>
-      <rect x="100" y="276" width="100" height="24" rx="3" fill="#dc2626"/>
-      <rect x="110" y="262" width="80" height="14" rx="2" fill="#eab308"/>
-      <circle cx="270" cy="300" r="25" fill="#e2e8f0" stroke="#64748b" stroke-width="4"/>
+      <rect width="400" height="400" rx="30" fill="#0284c7"/>
+      <!-- Sunset Golden Sun -->
+      <circle cx="200" cy="180" r="110" fill="#fde047" opacity="0.7"/>
+      <!-- Fluffy White Clouds -->
+      <circle cx="70" cy="330" r="50" fill="#ffffff"/>
+      <circle cx="140" cy="340" r="60" fill="#ffffff"/>
+      <circle cx="240" cy="330" r="70" fill="#ffffff"/>
+      <circle cx="340" cy="340" r="55" fill="#ffffff"/>
+      <!-- Doraemon Flying with Take-Copter -->
+      <!-- Bamboo Copter Propeller -->
+      <line x1="140" y1="120" x2="140" y2="90" stroke="#facc15" stroke-width="4"/>
+      <ellipse cx="140" cy="90" rx="35" ry="6" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>
+      <!-- Doraemon Figure -->
+      <circle cx="140" cy="160" r="40" fill="#0284c7" stroke="#0369a1" stroke-width="4"/>
+      <circle cx="140" cy="168" r="28" fill="#ffffff"/>
+      <circle cx="140" cy="155" r="7" fill="#ef4444"/>
+      <!-- Nobita Flying Alongside -->
+      <!-- Nobita Copter -->
+      <line x1="270" y1="140" x2="270" y2="110" stroke="#facc15" stroke-width="4"/>
+      <ellipse cx="270" cy="110" rx="35" ry="6" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>
+      <!-- Nobita Head & Glasses -->
+      <circle cx="270" cy="170" r="32" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+      <path d="M245 155 C255 135 285 135 295 155 Z" fill="#1e293b"/>
+      <circle cx="260" cy="170" r="10" fill="none" stroke="#1e293b" stroke-width="3"/>
+      <circle cx="280" cy="170" r="10" fill="none" stroke="#1e293b" stroke-width="3"/>
     </svg>`,
   },
   {
     id: 'hard-4',
-    title: 'Majestic Koi Pond',
+    title: 'Baby Krishna Makhan Chor',
     difficulty: 'hard',
-    category: 'Nature',
-    hint: 'Two graceful Yin-Yang swimming Japanese koi fish with spotted red/white scales and lily pads!',
-    palette: ['#ef4444', '#f8fafc', '#0284c7', '#22c55e', '#0f172a'],
+    category: 'Cartoon',
+    hint: 'Cute blue baby Krishna with peacock feather in hair, sitting with a broken earthen butter pot!',
+    palette: ['#38bdf8', '#0284c7', '#facc15', '#78350f', '#10b981'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#0284c7"/>
-      <!-- Water Ripples -->
-      <ellipse cx="200" cy="200" rx="160" ry="160" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.5"/>
-      <ellipse cx="200" cy="200" rx="100" ry="100" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.6"/>
-      <!-- Lily Pads -->
-      <path d="M80 120 A 40 40 0 1 1 110 80 L80 120 Z" fill="#22c55e" stroke="#15803d" stroke-width="4"/>
-      <path d="M300 290 A 45 45 0 1 1 335 250 L300 290 Z" fill="#22c55e" stroke="#15803d" stroke-width="4"/>
-      <!-- Lotus Flower -->
-      <circle cx="100" cy="100" r="10" fill="#f472b6"/>
-      <!-- Koi 1 (Red & White) -->
-      <path d="M160 280 C110 240 120 150 190 120 C210 110 220 140 190 180 C160 220 200 270 230 290" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
-      <circle cx="190" cy="120" r="14" fill="#ef4444"/>
-      <!-- Koi 1 Fins -->
-      <path d="M220 290 L250 330 L220 315 L190 330 Z" fill="#ffffff" opacity="0.8"/>
-      <!-- Koi 2 (Dark & Orange) -->
-      <path d="M240 120 C290 160 280 250 210 280 C190 290 180 260 210 220 C240 180 200 130 170 110" fill="none" stroke="#ea580c" stroke-width="26" stroke-linecap="round"/>
-      <circle cx="210" cy="280" r="14" fill="#0f172a"/>
-      <!-- Koi 2 Fins -->
-      <path d="M170 110 L140 70 L170 85 L200 70 Z" fill="#ea580c" opacity="0.8"/>
+      <rect width="400" height="400" rx="30" fill="#ecfdf5"/>
+      <!-- Peacock Feather on Crown -->
+      <path d="M190 70 Q160 30 180 15 Q205 30 195 70" fill="#10b981" stroke="#047857" stroke-width="3"/>
+      <circle cx="182" cy="30" r="8" fill="#38bdf8"/>
+      <circle cx="182" cy="30" r="4" fill="#1e1b4b"/>
+      <!-- Cute Blue Baby Krishna Head -->
+      <circle cx="190" cy="140" r="60" fill="#38bdf8" stroke="#0284c7" stroke-width="5"/>
+      <!-- Curly Dark Hair & Golden Crown Band -->
+      <path d="M135 125 C140 75 240 75 245 125 Z" fill="#1e293b"/>
+      <rect x="145" y="110" width="90" height="12" rx="4" fill="#facc15" stroke="#d97706" stroke-width="2"/>
+      <!-- Big Sparkling Lotus Eyes -->
+      <ellipse cx="170" cy="135" rx="12" ry="8" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+      <circle cx="172" cy="135" r="5" fill="#1e293b"/>
+      <ellipse cx="210" cy="135" rx="12" ry="8" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+      <circle cx="208" cy="135" r="5" fill="#1e293b"/>
+      <!-- Tilak & Smile with Butter Smear -->
+      <line x1="190" y1="105" x2="190" y2="125" stroke="#ef4444" stroke-width="4"/>
+      <path d="M180 155 Q190 165 200 155" fill="none" stroke="#1e293b" stroke-width="4"/>
+      <ellipse cx="202" cy="158" rx="5" ry="3" fill="#ffffff"/>
+      <!-- Earthen Clay Pot (Matka) Leaking White Butter -->
+      <path d="M220 250 C180 250 170 340 240 350 C310 350 310 250 270 250 Z" fill="#b45309" stroke="#78350f" stroke-width="5"/>
+      <!-- Melting White Butter (Makhan) -->
+      <ellipse cx="245" cy="250" rx="35" ry="12" fill="#ffffff"/>
+      <path d="M225 255 Q235 300 245 285 Q255 310 265 255" fill="#ffffff"/>
+      <!-- Baby Krishna Crawling Body -->
+      <ellipse cx="150" cy="260" rx="50" ry="40" fill="#38bdf8" stroke="#0284c7" stroke-width="5"/>
+      <!-- Golden Flute (Bansuri) -->
+      <line x1="90" y1="280" x2="160" y2="210" stroke="#facc15" stroke-width="8" stroke-linecap="round"/>
     </svg>`,
   },
   {
     id: 'hard-5',
-    title: 'Neon Tokyo Skyline',
+    title: 'Goku Super Saiyan Kamehameha',
     difficulty: 'hard',
-    category: 'Sci-Fi',
-    hint: 'Dramatic Mount Fuji silhouette, giant pink retro sun, neon skyscraper skyline, and laser grid!',
-    palette: ['#ec4899', '#8b5cf6', '#06b6d4', '#facc15', '#090d16'],
+    category: 'Anime',
+    hint: 'Goku with spiky golden Super Saiyan hair, charging a glowing blue energy sphere with electric spark auras!',
+    palette: ['#facc15', '#38bdf8', '#ea580c', '#2563eb', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#090d16"/>
-      <!-- Giant Retro Synthwave Sun -->
-      <circle cx="200" cy="170" r="90" fill="#f43f5e"/>
-      <line x1="110" y1="180" x2="290" y2="180" stroke="#090d16" stroke-width="4"/>
-      <line x1="120" y1="200" x2="280" y2="200" stroke="#090d16" stroke-width="6"/>
-      <line x1="140" y1="220" x2="260" y2="220" stroke="#090d16" stroke-width="8"/>
-      <!-- Mount Fuji Silhouette -->
-      <polygon points="70,250 200,120 330,250" fill="#312e81"/>
-      <polygon points="175,145 200,120 225,145 210,155 200,148 190,155" fill="#f8fafc"/>
-      <!-- Tokyo Skyscraper Silhouettes -->
-      <rect x="40" y="200" width="45" height="120" fill="#1e1b4b" stroke="#06b6d4" stroke-width="2"/>
-      <rect x="90" y="160" width="55" height="160" fill="#0f172a" stroke="#ec4899" stroke-width="2"/>
-      <rect x="155" y="210" width="50" height="110" fill="#1e1b4b"/>
-      <rect x="215" y="175" width="60" height="145" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
-      <rect x="285" y="190" width="40" height="130" fill="#1e1b4b" stroke="#facc15" stroke-width="2"/>
-      <rect x="330" y="220" width="40" height="100" fill="#0f172a"/>
-      <!-- Glowing Window Matrix -->
-      <line x1="100" y1="180" x2="135" y2="180" stroke="#facc15" stroke-dasharray="3,3" stroke-width="2"/>
-      <line x1="100" y1="200" x2="135" y2="200" stroke="#06b6d4" stroke-dasharray="3,3" stroke-width="2"/>
-      <line x1="225" y1="195" x2="265" y2="195" stroke="#ec4899" stroke-dasharray="3,3" stroke-width="2"/>
-      <!-- Cyber Highway Grid Ground -->
-      <rect x="0" y="320" width="400" height="80" fill="#020617"/>
-      <line x1="200" y1="320" x2="40" y2="400" stroke="#ec4899" stroke-width="3"/>
-      <line x1="200" y1="320" x2="150" y2="400" stroke="#06b6d4" stroke-width="3"/>
-      <line x1="200" y1="320" x2="250" y2="400" stroke="#06b6d4" stroke-width="3"/>
-      <line x1="200" y1="320" x2="360" y2="400" stroke="#ec4899" stroke-width="3"/>
+      <rect width="400" height="400" rx="30" fill="#0b1329"/>
+      <!-- Super Saiyan Glowing Aura -->
+      <circle cx="200" cy="200" r="160" fill="#fde047" opacity="0.25"/>
+      <!-- Giant Spiky Golden Hair -->
+      <polygon points="120,150 70,80 150,90" fill="#facc15" stroke="#eab308" stroke-width="4"/>
+      <polygon points="140,90 130,20 180,60" fill="#facc15" stroke="#eab308" stroke-width="4"/>
+      <polygon points="180,60 200,10 220,60" fill="#facc15" stroke="#eab308" stroke-width="4"/>
+      <polygon points="220,60 270,20 260,90" fill="#facc15" stroke="#eab308" stroke-width="4"/>
+      <polygon points="260,90 330,80 280,150" fill="#facc15" stroke="#eab308" stroke-width="4"/>
+      <!-- Goku Face & Fierce Eyes -->
+      <polygon points="150,140 250,140 200,210" fill="#fed7aa" stroke="#ea580c" stroke-width="4"/>
+      <!-- Intense Turquoise Saiyan Eyes -->
+      <polygon points="165,155 185,150 180,165" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+      <polygon points="235,155 215,150 220,165" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+      <!-- Orange Martial Arts Gi -->
+      <polygon points="140,210 260,210 280,320 120,320" fill="#ea580c" stroke="#c2410c" stroke-width="6"/>
+      <polygon points="180,210 220,210 200,280" fill="#2563eb"/>
+      <!-- Glowing Blue Kamehameha Sphere in Hands -->
+      <circle cx="200" cy="300" r="45" fill="#38bdf8" stroke="#bae6fd" stroke-width="6"/>
+      <circle cx="200" cy="300" r="30" fill="#ffffff"/>
+      <!-- Lightning Sparks -->
+      <polyline points="150,280 170,290 160,310 180,320" fill="none" stroke="#67e8f9" stroke-width="4"/>
+      <polyline points="250,280 230,290 240,310 220,320" fill="none" stroke="#67e8f9" stroke-width="4"/>
     </svg>`,
   },
   {
     id: 'hard-6',
-    title: 'Dragon & Crystal',
+    title: 'Pikachu Thunderbolt & Ash',
     difficulty: 'hard',
-    category: 'Magic',
-    hint: 'Fierce winged green dragon coiled around a giant glowing blue magic crystal prism!',
-    palette: ['#10b981', '#06b6d4', '#facc15', '#ef4444', '#0f172a'],
+    category: 'Anime',
+    hint: 'Electric Pikachu leaping with blazing lightning bolts, accompanied by Ash Ketchum’s iconic red cap!',
+    palette: ['#facc15', '#ef4444', '#38bdf8', '#1e293b', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#0f172a"/>
-      <!-- Glowing Magic Crystal -->
-      <polygon points="200,60 250,160 200,340 150,160" fill="#38bdf8" stroke="#bae6fd" stroke-width="6"/>
-      <polygon points="200,60 220,160 200,340" fill="#0284c7"/>
-      <!-- Dragon Wings Spread -->
-      <path d="M170 170 C100 110 50 140 40 170 C70 200 120 210 160 210 Z" fill="#059669" stroke="#047857" stroke-width="5"/>
-      <path d="M230 170 C300 110 350 140 360 170 C330 200 280 210 240 210 Z" fill="#059669" stroke="#047857" stroke-width="5"/>
-      <!-- Coiled Dragon Body -->
-      <path d="M130 290 C120 220 280 220 270 290 C260 350 140 350 130 290 Z" fill="none" stroke="#10b981" stroke-width="24"/>
-      <!-- Dragon Head -->
-      <path d="M160 140 L110 110 L130 160 Z" fill="#10b981" stroke="#047857" stroke-width="4"/>
-      <!-- Horns & Red Eye -->
-      <polygon points="150,130 175,95 160,135" fill="#facc15"/>
-      <circle cx="130" cy="130" r="5" fill="#ef4444"/>
-      <!-- Fire Breath Sparkles -->
-      <circle cx="95" cy="100" r="8" fill="#f97316"/>
-      <circle cx="80" cy="85" r="5" fill="#facc15"/>
+      <rect width="400" height="400" rx="30" fill="#1e1b4b"/>
+      <!-- Giant Thunderbolt Lightning FX -->
+      <polygon points="200,20 220,120 180,130 250,250 160,220 240,380 140,260 180,240 120,140 170,130" fill="#facc15" stroke="#fef08a" stroke-width="4"/>
+      <!-- Ash Ketchum Red Cap on Left -->
+      <path d="M70 120 C70 80 140 80 140 120 Z" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
+      <ellipse cx="140" cy="120" rx="35" ry="8" fill="#ffffff" stroke="#991b1b" stroke-width="3"/>
+      <circle cx="105" cy="100" r="8" fill="#ffffff"/>
+      <!-- Leaping Pikachu Body -->
+      <ellipse cx="240" cy="220" rx="65" ry="50" fill="#facc15" stroke="#ca8a04" stroke-width="5" transform="rotate(-15 240 220)"/>
+      <circle cx="270" cy="180" r="42" fill="#facc15" stroke="#ca8a04" stroke-width="5"/>
+      <!-- Pikachu Ears -->
+      <polygon points="280,150 340,90 300,160" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+      <polygon points="340,90 325,115 315,105" fill="#1e293b"/>
+      <!-- Cheeks & Thunderbolt Tail -->
+      <circle cx="295" cy="195" r="12" fill="#ef4444"/>
+      <path d="M180 250 L150 230 L160 210 L130 190" fill="none" stroke="#facc15" stroke-width="14" stroke-linejoin="miter"/>
     </svg>`,
   },
   {
     id: 'hard-7',
-    title: 'Enchanted Tree of Life',
+    title: 'Spider-Man Web Sling',
     difficulty: 'hard',
-    category: 'Nature',
-    hint: 'Gigantic mystical spiral tree canopy brimming with bioluminescent glow, roots, and fireflies!',
-    palette: ['#a855f7', '#06b6d4', '#ec4899', '#3b82f6', '#020617'],
+    category: 'Cartoon',
+    hint: 'Classic red & blue webbed superhero shooting a sticky web across high city skyscrapers!',
+    palette: ['#ef4444', '#1d4ed8', '#1e293b', '#ffffff', '#0f172a'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#020617"/>
-      <!-- Glowing Forest Mist -->
-      <circle cx="200" cy="180" r="140" fill="#8b5cf6" opacity="0.2"/>
-      <!-- Spiral Tree Canopy -->
-      <circle cx="200" cy="140" r="75" fill="#a855f7" opacity="0.8"/>
-      <circle cx="145" cy="160" r="55" fill="#06b6d4" opacity="0.75"/>
-      <circle cx="255" cy="160" r="55" fill="#ec4899" opacity="0.75"/>
-      <circle cx="200" cy="90" r="50" fill="#38bdf8" opacity="0.85"/>
-      <!-- Entangled Trunk & Roots -->
-      <path d="M190 350 C180 270 160 240 180 190 L220 190 C240 240 220 270 210 350 Z" fill="#475569" stroke="#94a3b8" stroke-width="4"/>
-      <path d="M180 350 C150 370 110 380 80 375" fill="none" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
-      <path d="M220 350 C250 370 290 380 320 375" fill="none" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
-      <!-- Hanging Bioluminescent Lanterns / Fireflies -->
-      <circle cx="130" cy="220" r="8" fill="#fde047"/>
-      <line x1="130" y1="180" x2="130" y2="215" stroke="#38bdf8" stroke-width="2"/>
-      <circle cx="270" cy="220" r="8" fill="#fde047"/>
-      <line x1="270" y1="180" x2="270" y2="215" stroke="#ec4899" stroke-width="2"/>
-      <circle cx="200" cy="240" r="10" fill="#67e8f9"/>
-      <line x1="200" y1="190" x2="200" y2="232" stroke="#67e8f9" stroke-width="2"/>
+      <rect width="400" height="400" rx="30" fill="#0f172a"/>
+      <!-- Skyscraper Silhouettes with Lit Windows -->
+      <rect x="30" y="180" width="70" height="220" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <rect x="300" y="140" width="80" height="260" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <line x1="45" y1="200" x2="85" y2="200" stroke="#facc15" stroke-dasharray="4,4" stroke-width="2"/>
+      <line x1="315" y1="170" x2="365" y2="170" stroke="#facc15" stroke-dasharray="4,4" stroke-width="2"/>
+      <!-- Web Line Across Sky -->
+      <line x1="310" y1="140" x2="200" y2="210" stroke="#ffffff" stroke-width="5"/>
+      <!-- Spider-Man Mid-Air Action Pose -->
+      <ellipse cx="200" cy="220" rx="45" ry="32" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="4"/>
+      <!-- Red Chest & Web Grid -->
+      <polygon points="180,195 220,195 210,245 190,245" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+      <!-- Red Masked Head -->
+      <ellipse cx="200" cy="160" rx="36" ry="44" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
+      <!-- Web Mask Lines -->
+      <line x1="200" y1="116" x2="200" y2="204" stroke="#1e293b" stroke-width="2"/>
+      <line x1="164" y1="160" x2="236" y2="160" stroke="#1e293b" stroke-width="2"/>
+      <!-- White Triangular Spider Eyes with Black Rim -->
+      <polygon points="175,150 195,160 178,170" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+      <polygon points="225,150 205,160 222,170" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
     </svg>`,
   },
   {
     id: 'hard-8',
-    title: 'Tropical Coral Reef',
+    title: 'Motu & Patlu Chai Stall',
     difficulty: 'hard',
-    category: 'Nature',
-    hint: 'Underwater scene with brain coral, clownfish anemone, sea turtle, and sunbeam caustics!',
-    palette: ['#06b6d4', '#f97316', '#ec4899', '#facc15', '#083344'],
+    category: 'Cartoon',
+    hint: 'Motu eating samosas while skinny Patlu gives brilliant ideas with a steaming hot kettle of cutting chai!',
+    palette: ['#ef4444', '#f59e0b', '#facc15', '#22c55e', '#78350f'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#083344"/>
-      <!-- Sun Rays -->
-      <polygon points="80,0 140,0 200,400 100,400" fill="#38bdf8" opacity="0.15"/>
-      <polygon points="220,0 280,0 360,400 280,400" fill="#38bdf8" opacity="0.15"/>
-      <!-- Corals -->
-      <path d="M50 400 C50 320 120 310 110 400" fill="#ec4899" stroke="#be185d" stroke-width="6"/>
-      <path d="M280 400 C300 290 380 300 360 400" fill="#f59e0b" stroke="#b45309" stroke-width="6"/>
-      <path d="M120 400 C150 340 220 330 200 400" fill="#a855f7" stroke="#7e22ce" stroke-width="6"/>
-      <!-- Sea Turtle Swimming -->
-      <ellipse cx="220" cy="150" rx="40" ry="28" fill="#15803d" stroke="#166534" stroke-width="4"/>
-      <circle cx="270" cy="140" r="14" fill="#22c55e"/>
-      <path d="M210 130 Q240 90 260 100" fill="none" stroke="#22c55e" stroke-width="12" stroke-linecap="round"/>
-      <path d="M210 170 Q240 210 260 200" fill="none" stroke="#22c55e" stroke-width="12" stroke-linecap="round"/>
-      <!-- Clownfish (Nemo) -->
-      <ellipse cx="140" cy="240" rx="24" ry="16" fill="#f97316"/>
-      <polygon points="120,240 100,225 100,255" fill="#f97316"/>
-      <rect x="135" y="225" width="6" height="30" fill="#ffffff"/>
-      <circle cx="155" cy="235" r="3" fill="#000000"/>
+      <rect width="400" height="400" rx="30" fill="#fffbeb"/>
+      <!-- Tea Stall Wooden Canopy -->
+      <polygon points="40,80 360,80 380,120 20,120" fill="#ef4444" stroke="#b91c1c" stroke-width="4"/>
+      <rect x="50" y="240" width="300" height="120" rx="8" fill="#78350f" stroke="#451a03" stroke-width="5"/>
+      <!-- Steaming Chai Kettle -->
+      <ellipse cx="200" cy="225" rx="35" ry="25" fill="#94a3b8" stroke="#475569" stroke-width="4"/>
+      <path d="M190 200 Q200 170 195 150" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+      <!-- Motu on Left with Samosa -->
+      <circle cx="120" cy="180" r="40" fill="#fed7aa" stroke="#ea580c" stroke-width="4"/>
+      <polygon points="145,210 175,210 160,185" fill="#f59e0b" stroke="#b45309" stroke-width="3"/>
+      <!-- Patlu on Right (Skinny Yellow Kurta + Glasses) -->
+      <ellipse cx="280" cy="170" rx="28" ry="40" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+      <rect x="255" y="210" width="50" height="80" rx="8" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+      <!-- Patlu Glasses -->
+      <circle cx="270" cy="165" r="9" fill="none" stroke="#1e293b" stroke-width="3"/>
+      <circle cx="290" cy="165" r="9" fill="none" stroke="#1e293b" stroke-width="3"/>
+      <line x1="279" y1="165" x2="281" y2="165" stroke="#1e293b" stroke-width="3"/>
     </svg>`,
   },
   {
     id: 'hard-9',
-    title: 'Vintage Vespa in Paris',
+    title: 'Simba on Pride Rock',
     difficulty: 'hard',
-    category: 'Objects',
-    hint: 'Classic mint green Italian scooter parked with Eiffel Tower in pastel sunset background!',
-    palette: ['#10b981', '#6ee7b7', '#f43f5e', '#fde047', '#1e293b'],
+    category: 'Cartoon',
+    hint: 'Baby lion cub Simba held high on Pride Rock with morning African savannah sunrise and acacia trees!',
+    palette: ['#f59e0b', '#d97706', '#ef4444', '#facc15', '#1e293b'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#fef2f2"/>
-      <!-- Eiffel Tower Backdrop -->
-      <polygon points="180,260 220,260 205,50 195,50" fill="none" stroke="#fca5a5" stroke-width="6"/>
-      <line x1="185" y1="180" x2="215" y2="180" stroke="#fca5a5" stroke-width="4"/>
-      <line x1="175" y1="230" x2="225" y2="230" stroke="#fca5a5" stroke-width="4"/>
-      <!-- Vespa Wheels -->
-      <circle cx="120" cy="310" r="35" fill="#1e293b" stroke="#cbd5e1" stroke-width="10"/>
-      <circle cx="280" cy="310" r="35" fill="#1e293b" stroke="#cbd5e1" stroke-width="10"/>
-      <!-- Scooter Body & Apron -->
-      <path d="M120 310 C140 250 200 260 260 260 L280 310 Z" fill="#6ee7b7" stroke="#059669" stroke-width="6"/>
-      <path d="M240 260 L260 170 L230 170" fill="none" stroke="#059669" stroke-width="10" stroke-linecap="round"/>
-      <!-- Handlebar & Headlamp -->
-      <rect x="220" y="155" width="60" height="15" rx="7" fill="#6ee7b7" stroke="#059669" stroke-width="4"/>
-      <circle cx="250" cy="162" r="12" fill="#fef08a" stroke="#d97706" stroke-width="3"/>
-      <!-- Leather Seat -->
-      <path d="M160 245 Q210 235 240 245" fill="none" stroke="#78350f" stroke-width="14" stroke-linecap="round"/>
+      <rect width="400" height="400" rx="30" fill="#ea580c"/>
+      <!-- Giant Morning Sun -->
+      <circle cx="200" cy="240" r="130" fill="#fef08a"/>
+      <!-- Pride Rock Silhouette Peak -->
+      <polygon points="0,380 240,240 180,400 0,400" fill="#451a03"/>
+      <!-- Baby Simba Cub Silhouette on Top -->
+      <circle cx="230" cy="220" r="18" fill="#451a03"/>
+      <ellipse cx="215" cy="235" rx="18" ry="12" fill="#451a03"/>
+      <path d="M200 240 Q185 230 180 245" fill="none" stroke="#451a03" stroke-width="4"/>
+      <!-- Distant Acacia Tree -->
+      <polygon points="340,320 345,380 335,380" fill="#451a03"/>
+      <ellipse cx="340" cy="315" rx="35" ry="12" fill="#451a03"/>
+      <!-- Birds in Sky -->
+      <path d="M120 100 Q130 90 140 100 Q150 90 160 100" fill="none" stroke="#78350f" stroke-width="3"/>
+      <path d="M260 80 Q270 70 280 80 Q290 70 300 80" fill="none" stroke="#78350f" stroke-width="3"/>
     </svg>`,
   },
   {
     id: 'hard-10',
-    title: 'Futuristic Mech Suit',
+    title: 'Shinchan as Action Kamen',
     difficulty: 'hard',
-    category: 'Sci-Fi',
-    hint: 'Armored combat mecha with neon energy blade, chest reactor core, and laser visor!',
-    palette: ['#3b82f6', '#1d4ed8', '#06b6d4', '#ef4444', '#0f172a'],
+    category: 'Anime',
+    hint: 'Shinchan dressed in his favorite superhero Action Kamen green suit, helmet, and shooting Kamen laser beam!',
+    palette: ['#10b981', '#f43f5e', '#fed7aa', '#facc15', '#ffffff'],
     svg: `<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <rect width="400" height="400" rx="30" fill="#0b1329"/>
-      <!-- Energy Blade -->
-      <line x1="90" y1="80" x2="120" y2="280" stroke="#06b6d4" stroke-width="14" stroke-linecap="round"/>
-      <line x1="90" y1="80" x2="120" y2="280" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
-      <!-- Armored Shoulders -->
-      <polygon points="120,150 70,180 110,220 140,180" fill="#1d4ed8" stroke="#60a5fa" stroke-width="4"/>
-      <polygon points="280,150 330,180 290,220 260,180" fill="#1d4ed8" stroke="#60a5fa" stroke-width="4"/>
-      <!-- Chest Armor & Core -->
-      <polygon points="140,150 260,150 240,270 160,270" fill="#3b82f6" stroke="#1d4ed8" stroke-width="6"/>
-      <polygon points="200,185 225,225 175,225" fill="#06b6d4"/>
-      <polygon points="200,195 215,220 185,220" fill="#ffffff"/>
-      <!-- Mech Helmet -->
-      <polygon points="170,140 230,140 220,80 180,80" fill="#1e293b" stroke="#60a5fa" stroke-width="4"/>
-      <!-- Glowing Laser Visor -->
-      <rect x="180" y="105" width="40" height="10" rx="3" fill="#ef4444"/>
-      <!-- Leg Plating -->
-      <polygon points="160,270 180,360 140,360 140,280" fill="#1d4ed8"/>
-      <polygon points="240,270 220,360 260,360 260,280" fill="#1d4ed8"/>
+      <rect width="400" height="400" rx="30" fill="#0f172a"/>
+      <!-- Action Kamen Beam Rays -->
+      <polygon points="260,200 400,100 400,300" fill="#38bdf8" opacity="0.3"/>
+      <line x1="260" y1="200" x2="400" y2="200" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+      <!-- Green Superhero Suit Body -->
+      <rect x="130" y="220" width="120" height="100" rx="15" fill="#10b981" stroke="#047857" stroke-width="5"/>
+      <rect x="160" y="220" width="60" height="60" fill="#f43f5e"/>
+      <!-- Action Kamen Masked Helmet -->
+      <circle cx="190" cy="150" r="60" fill="#10b981" stroke="#047857" stroke-width="5"/>
+      <!-- Gold Star on Forehead -->
+      <polygon points="190,105 195,115 205,115 197,122 200,132 190,126 180,132 183,122 175,115 185,115" fill="#facc15"/>
+      <!-- Shinchan Face through Mask -->
+      <ellipse cx="190" cy="165" rx="38" ry="30" fill="#fed7aa"/>
+      <ellipse cx="175" cy="155" rx="8" ry="12" fill="#1e293b"/>
+      <ellipse cx="205" cy="155" rx="8" ry="12" fill="#1e293b"/>
+      <!-- Wide Superhero Laugh -->
+      <path d="M175 175 Q190 195 205 175 Z" fill="#dc2626"/>
+      <!-- Hero Belt & Gloves -->
+      <rect x="130" y="290" width="120" height="16" fill="#facc15" stroke="#d97706" stroke-width="2"/>
     </svg>`,
   },
 ];

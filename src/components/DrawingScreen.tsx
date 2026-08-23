@@ -353,7 +353,7 @@ export const DrawingScreen: React.FC<DrawingScreenProps> = ({
           {isSolo ? (
             <div className="flex items-center gap-1.5 text-xs text-slate-300">
               <span className="text-base">🎨</span>
-              <span className="font-semibold hidden xs:inline">Solo Practice Mode</span>
+              <span className="font-semibold hidden xs:inline">Solo Warmup Mode</span>
             </div>
           ) : partnerPlayer ? (
             <div className="flex items-center gap-2">
@@ -366,12 +366,12 @@ export const DrawingScreen: React.FC<DrawingScreenProps> = ({
                   {partnerPlayer.submitted ? (
                     <span className="text-emerald-400 font-bold flex items-center gap-1">
                       <CheckCircle2 size={12} />
-                      Submitted! Waiting for you...
+                      Done! Waiting for you to finish... 💅
                     </span>
                   ) : (
-                    <span className="text-purple-300 animate-pulse flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping" />
-                      Drawing right now... ✏️
+                    <span className="text-pink-300 animate-pulse flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-ping" />
+                      Drawing their masterpiece right now... ✏️
                     </span>
                   )}
                 </span>
@@ -403,7 +403,7 @@ export const DrawingScreen: React.FC<DrawingScreenProps> = ({
           {/* Reaction Bar */}
           {!isSolo && (
             <div className="hidden sm:flex items-center gap-1 bg-slate-800/80 p-1 rounded-xl border border-white/10">
-              {['💖', '🔥', '🎉', '😂'].map((emoji) => (
+              {['💖', '😘', '🔥', '😂', '🥺', '👀'].map((emoji) => (
                 <button
                   key={emoji}
                   onClick={() => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import QRCode from 'qrcode';
-import { Users, Crown, Copy, Check, Share2, Sparkles, Clock, ArrowRight, Shield } from 'lucide-react';
+import { Users, Crown, Copy, Check, Share2, Sparkles, Clock, ArrowRight, Heart } from 'lucide-react';
 import { RoomData, Player } from '../services/socketService';
 import { sounds } from '../utils/soundEffects';
 
@@ -54,8 +54,8 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Join my Drawing Duel!',
-          text: `Join my 2-player Drawing Duel room with code ${room.code}!`,
+          title: 'Join my Couple Drawing Duel! 💕',
+          text: `Join my Couple Drawing Duel room with code ${room.code}! Let's see who draws better!`,
           url: inviteUrl,
         });
       } catch (e) {
@@ -74,17 +74,17 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
     <div className="w-full flex-1 max-w-5xl mx-auto p-4 sm:p-6 flex flex-col items-center justify-center">
       {/* Header Banner */}
       <div className="text-center mb-6 sm:mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-semibold mb-3">
-          <Sparkles size={14} className="text-purple-400" />
-          <span>Game Lobby</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/15 border border-pink-500/30 text-pink-300 text-xs font-semibold mb-3">
+          <Heart size={14} className="text-pink-400 fill-pink-400" />
+          <span>Couples Arena Lobby 💕</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-          Drawing Arena Ready
+          Who's The Real Artist? 🎨
         </h2>
         <p className="text-sm text-slate-300 mt-1">
           {bothConnected
-            ? 'Both artists assembled! Choose your difficulty and begin.'
-            : 'Invite your partner to join this room via code or QR.'}
+            ? 'Both partners in the arena! Host picks the difficulty and starts the duel!'
+            : 'Send your partner the code or scan the QR code to pair up!'}
         </p>
       </div>
 
@@ -92,9 +92,9 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
         {/* Left Col: Connected Players & Invite Card (md:col-span-5) */}
         <div className="md:col-span-5 space-y-4">
           {/* Room Code Card */}
-          <div className="glass-panel p-5 text-center relative overflow-hidden">
-            <span className="text-[11px] font-semibold tracking-wider text-slate-400 uppercase">
-              Room Invite Code
+          <div className="glass-panel p-5 text-center relative overflow-hidden border border-pink-500/30">
+            <span className="text-[11px] font-semibold tracking-wider text-pink-300 uppercase">
+              Partner Invite Code 💕
             </span>
             <div className="my-2 py-2 px-4 rounded-xl bg-slate-800/90 border border-white/15 font-mono text-3xl sm:text-4xl font-black tracking-widest text-pink-400 select-all">
               {room.code}
@@ -115,7 +115,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                 title="Share via WhatsApp or Mobile"
               >
                 <Share2 size={14} />
-                Share
+                WhatsApp
               </button>
 
               <button
@@ -134,20 +134,20 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
           <div className="glass-panel p-5">
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
               <Users size={14} />
-              Connected Artists ({room.players.length}/2)
+              Couples Roster ({room.players.length}/2)
             </h3>
 
             <div className="space-y-3">
               {/* Player 1 (Host) */}
               <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/80 border border-pink-500/30">
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">{player1?.avatar || '👩‍🎨'}</span>
+                  <span className="text-2xl">{player1?.avatar || '👸'}</span>
                   <div>
                     <div className="flex items-center gap-1.5">
                       <span className="font-bold text-sm text-white">{player1?.name || 'Player 1'}</span>
                       <Crown size={14} className="text-amber-400 fill-amber-400" />
                     </div>
-                    <span className="text-[11px] text-pink-400 font-medium">Room Host</span>
+                    <span className="text-[11px] text-pink-400 font-medium">👑 The Boss (Host)</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-1 text-[11px] text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10">
@@ -160,10 +160,10 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
               {player2 ? (
                 <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/80 border border-purple-500/30">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">{player2.avatar || '👨‍🎨'}</span>
+                    <span className="text-2xl">{player2.avatar || '🤴'}</span>
                     <div>
                       <span className="font-bold text-sm text-white">{player2.name}</span>
-                      <span className="block text-[11px] text-purple-400 font-medium">Partner</span>
+                      <span className="block text-[11px] text-purple-400 font-medium">💖 The Challenger</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-1 text-[11px] text-emerald-400 font-semibold px-2 py-0.5 rounded bg-emerald-500/10">
@@ -172,21 +172,21 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                   </div>
                 </div>
               ) : (
-                <div className="p-4 rounded-xl border border-dashed border-white/15 bg-slate-900/40 text-center">
+                <div className="p-4 rounded-xl border border-dashed border-pink-500/25 bg-slate-900/40 text-center">
                   <div className="w-8 h-8 rounded-full bg-slate-800 mx-auto flex items-center justify-center mb-2 animate-bounce">
                     <span className="text-sm">⏳</span>
                   </div>
-                  <p className="text-xs font-semibold text-slate-300">Waiting for Player 2...</p>
-                  <p className="text-[11px] text-slate-500 mt-0.5">Share code <strong className="text-pink-400">{room.code}</strong></p>
+                  <p className="text-xs font-semibold text-pink-300">Waiting for your partner to join...</p>
+                  <p className="text-[11px] text-slate-500 mt-0.5">Tell them to enter code <strong className="text-pink-400">{room.code}</strong></p>
                 </div>
               )}
             </div>
 
             {/* Quick Reactions Bar */}
             <div className="mt-4 pt-3 border-t border-white/10">
-              <span className="text-[11px] text-slate-400 block mb-2">Send cheer to room:</span>
+              <span className="text-[11px] text-slate-400 block mb-2">Send sweet/funny reaction:</span>
               <div className="flex items-center gap-2">
-                {['💖', '🔥', '🎉', '🎨', '👑', '😂'].map((emoji) => (
+                {['💖', '😘', '🔥', '😂', '🥺', '👑', '👀'].map((emoji) => (
                   <button
                     key={emoji}
                     onClick={() => {
@@ -207,9 +207,9 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
         <div className="md:col-span-7 glass-panel p-6 space-y-6">
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-base font-bold text-white">Select Difficulty Level</h3>
+              <h3 className="text-base font-bold text-white">Choose Battle Intensity</h3>
               {!isHost && (
-                <span className="text-xs text-slate-400 italic">Host selects settings</span>
+                <span className="text-xs text-pink-400 italic">Host decides rules!</span>
               )}
             </div>
 
@@ -235,8 +235,8 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                     EASY
                   </span>
                 </div>
-                <h4 className="font-bold text-sm text-white">Cute & Simple</h4>
-                <p className="text-[11px] text-slate-400 mt-1">Clean line art, cats, boba, fruit. 120s timer.</p>
+                <h4 className="font-bold text-sm text-white">Cute & Chill</h4>
+                <p className="text-[11px] text-slate-400 mt-1">Simple doodles. Zero relationship damage! 120s.</p>
               </button>
 
               {/* Medium */}
@@ -259,8 +259,8 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                     MEDIUM
                   </span>
                 </div>
-                <h4 className="font-bold text-sm text-white">Stylized Props</h4>
-                <p className="text-[11px] text-slate-400 mt-1">Astro corgi, retro boombox, potions. 90s timer.</p>
+                <h4 className="font-bold text-sm text-white">Playful Duel</h4>
+                <p className="text-[11px] text-slate-400 mt-1">Fun cartoon props. Minor ego at stake! 90s.</p>
               </button>
 
               {/* Hard */}
@@ -283,8 +283,8 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                     HARD
                   </span>
                 </div>
-                <h4 className="font-bold text-sm text-white">Complex Scenes</h4>
-                <p className="text-[11px] text-slate-400 mt-1">Cyberpunk ramen, steampunk owl, dragons. 60s timer.</p>
+                <h4 className="font-bold text-sm text-white">Savage Test</h4>
+                <p className="text-[11px] text-slate-400 mt-1">Loser cooks dinner tonight! 60s.</p>
               </button>
             </div>
           </div>
@@ -293,14 +293,14 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5 flex items-center gap-1.5">
               <Clock size={14} />
-              Round Duration
+              Round Timer
             </h4>
             <div className="flex flex-wrap gap-2">
               {[
-                { label: '60s (Blitz)', val: 60 },
+                { label: '60s (Speedrun)', val: 60 },
                 { label: '90s (Standard)', val: 90 },
-                { label: '120s (Chill)', val: 120 },
-                { label: '180s (Detailed)', val: 180 },
+                { label: '120s (Relaxed)', val: 120 },
+                { label: '180s (Artist Mode)', val: 180 },
                 { label: 'Untimed', val: 0 },
               ].map((t) => (
                 <button
@@ -338,14 +338,14 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
                   sounds.playClick();
                   onProceedToSelection();
                 }}
-                className="btn-primary w-full sm:w-auto py-3 px-6 text-sm"
+                className="btn-primary w-full sm:w-auto py-3 px-6 text-sm shadow-xl shadow-pink-500/25"
               >
-                <span>Choose Drawing Image</span>
+                <span>Pick Drawing Cartoon</span>
                 <ArrowRight size={16} />
               </button>
             ) : (
-              <div className="text-xs text-purple-300 font-semibold px-4 py-2.5 rounded-xl bg-purple-500/10 border border-purple-500/20 animate-pulse text-center">
-                Waiting for host to pick the image... 🎨
+              <div className="text-xs text-pink-300 font-semibold px-4 py-2.5 rounded-xl bg-pink-500/10 border border-pink-500/20 animate-pulse text-center">
+                Waiting for host to choose the prompt... 🎨
               </div>
             )}
           </div>
@@ -355,7 +355,7 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
       {/* QR Code Modal for Phone Joining */}
       {showQrModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn">
-          <div className="glass-panel w-full max-w-sm p-6 text-center relative">
+          <div className="glass-panel w-full max-w-sm p-6 text-center relative border border-pink-500/30">
             <button
               onClick={() => setShowQrModal(false)}
               className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center"
@@ -363,10 +363,10 @@ export const LobbyScreen: React.FC<LobbyScreenProps> = ({
               ✕
             </button>
 
-            <span className="text-2xl mb-1 block">📱</span>
-            <h3 className="text-lg font-bold text-white">Join on Mobile</h3>
+            <span className="text-3xl mb-1 block">📱💕</span>
+            <h3 className="text-lg font-bold text-white">Join on Partner's Phone</h3>
             <p className="text-xs text-slate-300 mt-1 mb-4">
-              Point your phone's camera at this QR code to join instantly:
+              Point their camera at this QR code to join your room instantly:
             </p>
 
             {qrCodeUrl && (

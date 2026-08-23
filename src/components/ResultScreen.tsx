@@ -203,23 +203,23 @@ export const ResultScreen: React.FC<ResultScreenProps> = ({
     <div className="w-full flex-1 max-w-6xl mx-auto p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center">
       {/* Victory Crown Banner */}
       <div className="text-center mb-6 sm:mb-8 animate-fadeIn">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs sm:text-sm font-bold mb-3 shadow-lg shadow-amber-500/20">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/20 border border-pink-500/40 text-pink-300 text-xs sm:text-sm font-bold mb-3 shadow-lg shadow-pink-500/20">
           <Trophy size={18} className="text-amber-400 fill-amber-400" />
-          <span>Match Evaluation Complete</span>
+          <span>AI Relationship Judge Verdict 💕</span>
         </div>
 
         <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
           {room.isTie ? (
-            <span className="gradient-text-gold">It's a Perfect Tie! 🤝</span>
+            <span className="gradient-text-gold">It's a Perfect Tie! Soulmate Energy! 🤝💕</span>
           ) : (
             <>
-              <span className="gradient-text-pink">{winner?.name}</span> Wins This Round! 👑
+              <span className="gradient-text-pink">{winner?.name}</span> Is The Better Artist! 👑
             </>
           )}
         </h1>
 
         <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-md mx-auto">
-          Scored by our multi-metric computer vision engine based on outline accuracy, color fidelity, and structural similarity.
+          Scored by our unbiased AI engine based on shape accuracy, color harmony, and doodle precision!
         </p>
       </div>
 

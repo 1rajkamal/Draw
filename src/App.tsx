@@ -312,9 +312,9 @@ export const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-3 px-4 border-t border-white/5 bg-slate-950/80 backdrop-blur-sm text-center text-xs text-slate-400">
+      <footer className="w-full py-3 px-4 border-t border-white/5 bg-slate-950/80 backdrop-blur-sm text-center text-xs text-pink-300/80">
         <p>
-          🎨 Drawing Duel — Real-Time Couple Game • Built with HTML5 Canvas & Computer Vision Accuracy Scoring
+          🎨 Drawing Duel — Couples & GF Only 💕 • Funny Real-Time Battle with AI Accuracy Verdicts
         </p>
       </footer>
     </div>

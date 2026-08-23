@@ -31,12 +31,14 @@ export const App: React.FC = () => {
     }
   }, []);
 
-  // Initialize Socket Event Subscriptions
+  // Initialize Socket / Network Event Subscriptions
   useEffect(() => {
     const socket = socketService.connect();
 
-    socket.on('connect', () => setConnected(true));
-    socket.on('disconnect', () => setConnected(false));
+    if (socket) {
+      socket.on('connect', () => setConnected(true));
+      socket.on('disconnect', () => setConnected(false));
+    }
 
     const unsubRoom = socketService.onRoomUpdated((updatedRoom) => {
       setRoom(updatedRoom);

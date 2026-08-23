@@ -82,29 +82,21 @@ export const App: React.FC = () => {
 
   // Actions
   const handleCreateRoom = async (name: string, avatar: string) => {
-    try {
-      setIsSolo(false);
-      const res = await socketService.createRoom(name, avatar);
-      setRoom(res.room);
-      setIsHost(res.isHost);
-      setMyPlayerId(socketService.getPlayerId());
-      setScreen('lobby');
-    } catch (err: any) {
-      alert(err.message || 'Failed to create room');
-    }
+    setIsSolo(false);
+    const res = await socketService.createRoom(name, avatar);
+    setRoom(res.room);
+    setIsHost(res.isHost);
+    setMyPlayerId(socketService.getPlayerId());
+    setScreen('lobby');
   };
 
   const handleJoinRoom = async (code: string, name: string, avatar: string) => {
-    try {
-      setIsSolo(false);
-      const res = await socketService.joinRoom(code, name, avatar);
-      setRoom(res.room);
-      setIsHost(res.isHost);
-      setMyPlayerId(socketService.getPlayerId());
-      setScreen(res.room.state as any);
-    } catch (err: any) {
-      alert(err.message || 'Failed to join room');
-    }
+    setIsSolo(false);
+    const res = await socketService.joinRoom(code, name, avatar);
+    setRoom(res.room);
+    setIsHost(res.isHost);
+    setMyPlayerId(socketService.getPlayerId());
+    setScreen(res.room.state as any);
   };
 
   const handleStartSolo = (name: string, avatar: string) => {

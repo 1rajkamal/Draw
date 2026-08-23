@@ -33,7 +33,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
     localStorage.setItem('drawing_duel_player_avatar', avatar);
   };
 
-  const handleCreate = (e: React.FormEvent) => {
+  const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!playerName.trim()) {
       setError('Please enter your name!');
@@ -43,10 +43,16 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
     setLoading(true);
     sounds.playClick();
     handleSaveProfile(playerName.trim(), selectedAvatar);
-    onCreateRoom(playerName.trim(), selectedAvatar);
+    try {
+      await onCreateRoom(playerName.trim(), selectedAvatar);
+    } catch (err: any) {
+      setError(err?.message || 'Could not connect to room server.');
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleJoin = (e: React.FormEvent) => {
+  const handleJoin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!playerName.trim()) {
       setError('Please enter your name!');
@@ -60,7 +66,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
     setLoading(true);
     sounds.playClick();
     handleSaveProfile(playerName.trim(), selectedAvatar);
-    onJoinRoom(roomCodeInput.trim().toUpperCase(), playerName.trim(), selectedAvatar);
+    try {
+      await onJoinRoom(roomCodeInput.trim().toUpperCase(), playerName.trim(), selectedAvatar);
+    } catch (err: any) {
+      setError(err?.message || 'Could not join room.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleSolo = () => {

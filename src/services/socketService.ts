@@ -63,65 +63,128 @@ class SocketService {
 
   public connect(): Socket {
     if (!this.socket) {
-      // Connect to same host or proxy port 3001 in dev
-      const socketUrl = window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin;
-      this.socket = io(socketUrl, {
+      // Connect to same origin (proxied via Vite /socket.io in dev) with direct fallback
+      const serverUrl = window.location.port === '5173'
+        ? `http://${window.location.hostname}:3001`
+        : window.location.origin;
+
+      this.socket = io(serverUrl, {
         transports: ['websocket', 'polling'],
         reconnectionAttempts: 10,
-        reconnectionDelay: 1000,
+        reconnectionDelay: 500,
+        timeout: 5000,
       });
 
       this.socket.on('connect', () => {
         console.log('⚡ Connected to Drawing Duel server:', this.socket?.id);
       });
 
+      this.socket.on('connect_error', (err) => {
+        console.warn('⚠️ Socket connection error:', err.message);
+      });
+
       this.socket.on('disconnect', () => {
         console.log('❌ Disconnected from server');
       });
     }
+
+    if (this.socket.disconnected) {
+      this.socket.connect();
+    }
+
     return this.socket;
   }
 
   public createRoom(playerName: string, avatar: string): Promise<{ room: RoomData; isHost: boolean }> {
     const s = this.connect();
     return new Promise((resolve, reject) => {
-      s.emit('create_room', {
-        playerName,
-        avatar,
-        playerId: this.myPlayerId,
-      });
+      let resolved = false;
+
+      const timeout = setTimeout(() => {
+        if (!resolved) {
+          resolved = true;
+          reject(new Error('Connection timed out. Please verify that the backend server is running.'));
+        }
+      }, 5000);
+
+      const doEmit = () => {
+        s.emit('create_room', {
+          playerName,
+          avatar,
+          playerId: this.myPlayerId,
+        });
+      };
 
       s.once('room_created', (data: { room: RoomData; playerId: string; isHost: boolean }) => {
-        this.currentRoom = data.room;
-        this.isHost = data.isHost;
-        resolve(data);
+        if (!resolved) {
+          resolved = true;
+          clearTimeout(timeout);
+          this.currentRoom = data.room;
+          this.isHost = data.isHost;
+          resolve(data);
+        }
       });
 
       s.once('error_message', (err: { message: string }) => {
-        reject(new Error(err.message));
+        if (!resolved) {
+          resolved = true;
+          clearTimeout(timeout);
+          reject(new Error(err.message));
+        }
       });
+
+      if (s.connected) {
+        doEmit();
+      } else {
+        s.once('connect', doEmit);
+      }
     });
   }
 
   public joinRoom(roomCode: string, playerName: string, avatar: string): Promise<{ room: RoomData; isHost: boolean }> {
     const s = this.connect();
     return new Promise((resolve, reject) => {
-      s.emit('join_room', {
-        roomCode,
-        playerName,
-        avatar,
-        playerId: this.myPlayerId,
-      });
+      let resolved = false;
+
+      const timeout = setTimeout(() => {
+        if (!resolved) {
+          resolved = true;
+          reject(new Error('Connection timed out. Please verify that the backend server is running.'));
+        }
+      }, 5000);
+
+      const doEmit = () => {
+        s.emit('join_room', {
+          roomCode,
+          playerName,
+          avatar,
+          playerId: this.myPlayerId,
+        });
+      };
 
       s.once('room_joined', (data: { room: RoomData; playerId: string; isHost: boolean }) => {
-        this.currentRoom = data.room;
-        this.isHost = data.isHost;
-        resolve(data);
+        if (!resolved) {
+          resolved = true;
+          clearTimeout(timeout);
+          this.currentRoom = data.room;
+          this.isHost = data.isHost;
+          resolve(data);
+        }
       });
 
       s.once('error_message', (err: { message: string }) => {
-        reject(new Error(err.message));
+        if (!resolved) {
+          resolved = true;
+          clearTimeout(timeout);
+          reject(new Error(err.message));
+        }
       });
+
+      if (s.connected) {
+        doEmit();
+      } else {
+        s.once('connect', doEmit);
+      }
     });
   }
 
